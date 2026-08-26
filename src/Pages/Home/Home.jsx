@@ -1,12 +1,21 @@
-import { useState } from "react";
-import viteLogo from "../../assets/vite.svg";
-import heroImg from "../../assets/hero.png";
+import { Link } from "react-router";
 import "./Home.css";
 
 function Home() {
   return (
     <>
-      <h1>Hola mundo</h1>
+      <h1>Inicio</h1>
+      <div className="home-buttons">
+        <Link to="/registro" className="btn">
+          Registro
+        </Link>
+        <Link to="/galeria" className="btn">
+          Galeria
+        </Link>
+        <Link to="/creditos" className="btn">
+          Creditos
+        </Link>
+      </div>
     </>
   );
 }
