@@ -11,6 +11,9 @@ function MenuPortafolios() {
       <Link to="/Nosotros/david" className="menu-item">
         David
       </Link>
+      <Link to="/Nosotros/estefania" className="menu-item">
+        Estefania
+      </Link>
     </nav>
   );
 }
