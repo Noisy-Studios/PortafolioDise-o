@@ -2,21 +2,21 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
 import "./index.css";
-import Creditos from "./pages/creditos/Creditos.jsx";
+import Contactanos from "./Pages/Creditos/Contactanos.jsx";
 import Galeria from "./pages/galeria/Galeria.jsx";
 import Home from "./pages/home/Home.jsx";
-import Registro from "./pages/registro/Registro.jsx";
+import Juegos from "./pages/registro/Juegos.jsx";
 import Menu from "./components/ui/menu/Menu.jsx";
-import Portafolios from "./Pages/Portafolios Individuales/Portafolios.jsx";
+import Nosotros from "./Pages/Portafolios Individuales/Nosotros.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Menu />
     <Routes>
-      <Route path="/creditos" element={<Creditos />} />
+      <Route path="/contactanos" element={<Contactanos />} />
       <Route path="/galeria" element={<Galeria />} />
-      <Route path="/registro" element={<Registro />} />
-      <Route path="/Portafolios/*" element={<Portafolios />} />
+      <Route path="/juegos" element={<Juegos />} />
+      <Route path="/Nosotros/*" element={<Nosotros />} />
       <Route path="/" element={<Home />} />
     </Routes>
   </BrowserRouter>,

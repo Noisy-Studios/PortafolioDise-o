@@ -3,7 +3,7 @@ import "./Portafolios.css";
 import Rios from "./Rios/Rios";
 import MenuPortafolios from "../../components/ui/menu/PortafolioMenus";
 
-function Portafolios() {
+function Nosotros() {
   return (
     <div>
       <MenuPortafolios />
@@ -16,4 +16,4 @@ function Portafolios() {
   );
 }
 
-export default Portafolios;
+export default Nosotros;
