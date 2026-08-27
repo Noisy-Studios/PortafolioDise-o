@@ -3,7 +3,7 @@ import "./Creditos.css";
 function Contactanos() {
   return (
     <div>
-      <h1>Contactanos!</h1>
+      <h1>¡Contáctanos!</h1>
     </div>
   );
 }
