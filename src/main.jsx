@@ -7,6 +7,7 @@ import Galeria from "./pages/galeria/Galeria.jsx";
 import Home from "./pages/home/Home.jsx";
 import Registro from "./pages/registro/Registro.jsx";
 import Menu from "./components/ui/menu/Menu.jsx";
+import Portafolios from "./Pages/Portafolios Individuales/Portafolios.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -15,6 +16,7 @@ createRoot(document.getElementById("root")).render(
       <Route path="/creditos" element={<Creditos />} />
       <Route path="/galeria" element={<Galeria />} />
       <Route path="/registro" element={<Registro />} />
+      <Route path="/Portafolios" element={<Portafolios />} />
       <Route path="/" element={<Home />} />
     </Routes>
   </BrowserRouter>,
