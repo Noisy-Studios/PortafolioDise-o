@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router";
 import "./Portafolios.css";
 import Rios from "./Rios/Rios";
-import Estefania from "./estefania/estefania";
+import David from "./David/David";
+import Estefa from "./Estefania/Estefa";
 import MenuPortafolios from "../../components/ui/menu/PortafolioMenus";
 
 function Nosotros() {
@@ -10,7 +11,8 @@ function Nosotros() {
       <MenuPortafolios />
       <Routes>
         <Route path="rios" element={<Rios />} />
-        <Route path="estefania" element={<Estefania />} />
+        <Route path="david" element={<David />} />
+        <Route path="estefania" element={<Estefa />} />
         {/* Agrega aquí las demás pestañas/rutas */}
         {/* <Route path="otra-pestana" element={<OtraPestana />} /> */}
       </Routes>
