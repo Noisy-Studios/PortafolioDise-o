@@ -1,0 +1,21 @@
+.menu-container {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  align-items: center;     /* Alinea verticalmente los elementos */
+  gap: 15px;               /* Espacio entre cada botón (reemplaza &nbsp;) */
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.menu-item {
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: #007bff; /* Color de fondo opcional */
+  color: white;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+  background-color: #0056b3; /* Efecto al pasar el cursor */
+}

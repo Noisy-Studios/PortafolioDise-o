@@ -1,0 +1,11 @@
+.portafolios {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.portafolios nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
