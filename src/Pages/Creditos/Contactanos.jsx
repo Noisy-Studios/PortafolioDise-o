@@ -1,4 +1,3 @@
-import "./Creditos.css";
 
 function Contactanos() {
   return (
