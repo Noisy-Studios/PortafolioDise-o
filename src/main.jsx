@@ -10,7 +10,7 @@ import Menu from "./components/ui/menu/Menu.jsx";
 import Nosotros from "./Pages/Portafolios Individuales/Nosotros.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/PortafolioDise-o">
     <Menu />
     <Routes>
       <Route path="/contactanos" element={<Contactanos />} />
