@@ -5,6 +5,8 @@ on:
     branches:
       - main
 
+  workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
@@ -38,16 +40,19 @@ jobs:
         with:
           path: ./dist
 
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-         deploy:
+  deploy:
     needs: build
+
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
+    permissions:
+      pages: write
+      id-token: write
+
     steps:
       - name: Deploy
         id: deployment
