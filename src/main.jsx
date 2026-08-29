@@ -3,9 +3,9 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
 import "./index.css";
 import Contactanos from "./Pages/Creditos/Contactanos.jsx";
-import Galeria from "./pages/galeria/Galeria.jsx";
-import Home from "./pages/home/Home.jsx";
-import Juegos from "./pages/registro/Juegos.jsx";
+import Galeria from "./Pages/galeria/galeria.jsx";
+import Home from "./Pages/Home/Home.jsx";
+import Juegos from "./Pages/registro/Juegos.jsx";
 import Menu from "./components/ui/menu/Menu.jsx";
 import Nosotros from "./Pages/Portafolios Individuales/Nosotros.jsx";
 
