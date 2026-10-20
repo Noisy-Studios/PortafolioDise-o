@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { X, Code2, Sparkles, ExternalLink, Award, Terminal, Cpu } from "lucide-react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 export function TeamMemberModal({ member, isOpen, onClose }) {
   useEffect(() => {
