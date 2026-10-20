@@ -116,7 +116,7 @@ export function ContactSection({ showHeader = true }) {
                   ¡Mensaje Recibido!
                 </h3>
                 <p className="text-gray-300 max-w-md mx-auto text-sm leading-relaxed">
-                  Gracias por ponerte en contacto con PixelRift Studios. Uno de nuestros desarrolladores responderá en menos de 24 horas.
+                  Gracias por ponerte en contacto con NoisyStudios. Uno de nuestros desarrolladores responderá en menos de 24 horas.
                 </p>
                 <button
                   type="button"
