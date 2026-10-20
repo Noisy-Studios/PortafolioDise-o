@@ -81,7 +81,7 @@ export function TrailerModal({ isOpen, onClose, title = "Tráiler Oficial", vide
 
         {/* Footer info */}
         <div className="px-6 py-3 bg-[#0a0d16] flex items-center justify-between text-xs text-gray-400">
-          <span>PIXELRIFT STUDIOS // MOTOR PROPIO & UNITY ENGINE</span>
+          <span>NOISYSTUDIOS // MOTOR PROPIO & UNITY ENGINE</span>
           <span className="text-purple-400 font-mono">CALIDAD: 4K ULTRA HD</span>
         </div>
       </div>
