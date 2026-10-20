@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { Gamepad2, ArrowUp, Heart, Sparkles, MessageSquare } from "lucide-react";
 import { TwitterIcon, YoutubeIcon, GithubIcon, DiscordIcon } from "./SocialIcons";
 import { studioInfo } from "../data/portfolioData";
