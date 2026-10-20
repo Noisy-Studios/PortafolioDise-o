@@ -55,11 +55,11 @@ export function Navbar({ onOpenPlayModal }) {
             </div>
             <div className="flex flex-col">
               <span className="font-heading font-black tracking-wider text-xl text-white flex items-center gap-1.5">
-                PIXELRIFT
+                NoisyStudios
                 <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
               </span>
               <span className="text-[10px] uppercase font-mono tracking-widest text-purple-400 -mt-1 font-semibold">
-                STUDIOS // INDIE
+                INDIE GAME STUDIO
               </span>
             </div>
           </Link>
