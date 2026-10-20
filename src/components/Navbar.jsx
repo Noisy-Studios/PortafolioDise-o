@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router";
+import { Link, useLocation } from "react-router-dom";
 import { Gamepad2, Menu as MenuIcon, X, Sparkles, Play } from "lucide-react";
 
 export function Navbar({ onOpenPlayModal }) {
