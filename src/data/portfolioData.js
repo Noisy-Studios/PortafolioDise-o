@@ -1,17 +1,17 @@
-// Data for PixelRift / Noisy Studios Gaming Portfolio
+// Data for NoisyStudios Gaming Portfolio
 
 export const studioInfo = {
-  name: "PIXELRIFT",
-  studioAlt: "Noisy Studios",
+  name: "NoisyStudios",
+  studioAlt: "NoisyStudios",
   tagline: "Forjando experiencias interactivas memorables con pasión indie, arte minucioso y tecnología de vanguardia.",
-  description: "Estudio independiente enfocado en mecánicas de juego profundas, dirección de arte inmersiva y narrativas que conectan emocionalmente con los jugadores.",
-  mission: "Creemos que los videojuegos son el arte más completo de nuestra era. PixelRift nació para demostrar que equipos pequeños pueden crear experiencias que compiten en innovación y emoción con cualquier gran estudio. Cada proyecto es una obsesión colectiva.",
-  email: "hola@pixelrift.dev",
-  pressEmail: "press@pixelrift.dev",
-  supportEmail: "support@pixelrift.dev",
-  discordUrl: "https://discord.gg/pixelrift",
-  twitterUrl: "https://x.com/pixelrift_dev",
-  youtubeUrl: "https://youtube.com/@pixelrift",
+  description: "Estudio independiente liderado por David Saldarriaga, Estefania Aristizabal y Juan David Rios, enfocado en mecánicas de juego profundas, dirección de arte inmersiva y narrativas que conectan emocionalmente con los jugadores.",
+  mission: "Creemos que los videojuegos son el arte más completo de nuestra era. NoisyStudios nació para demostrar que equipos pequeños y enfocados pueden crear experiencias que compiten en innovación y emoción con cualquier gran estudio. Cada proyecto es una obsesión colectiva.",
+  email: "hola@noisystudios.dev",
+  pressEmail: "press@noisystudios.dev",
+  supportEmail: "support@noisystudios.dev",
+  discordUrl: "https://discord.gg/noisystudios",
+  twitterUrl: "https://x.com/noisystudios_dev",
+  youtubeUrl: "https://youtube.com/@noisystudios",
   steamUrl: "https://store.steampowered.com",
   githubUrl: "https://github.com",
 };
@@ -255,10 +255,12 @@ export const teamMembers = [
   {
     id: "david",
     name: "David Saldarriaga",
-    role: "Lead Game Developer & Systems Architect",
+    isOwner: true,
+    ownerBadge: "Dueño & Co-Fundador",
+    role: "Dueño & Co-Fundador • Lead Game Developer & Systems Architect",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80",
-    bio: "Especialista en arquitectura de motores en C#, pipelines en Unity/Unreal y optimización de rendimiento a bajo nivel. Obsesionado con que cada input se sienta inmediato y placentero.",
-    skills: ["C#", "Unity Engine", "Arquitectura ECS", "Físicas 2D/3D", "Optimización"],
+    bio: "Dueño y Co-Fundador de NoisyStudios. Especialista en arquitectura de motores en C#, pipelines en Unity/Unreal y optimización de rendimiento a bajo nivel. Obsesionado con que cada input se sienta inmediato, responsivo y placentero.",
+    skills: ["C#", "Unity Engine", "Arquitectura ECS", "Físicas 2D/3D", "Optimización de Motores", "C++"],
     quote: "\"El mejor código es aquel que el jugador no nota pero siente en cada movimiento.\"",
     socials: {
       github: "https://github.com",
@@ -267,31 +269,35 @@ export const teamMembers = [
     }
   },
   {
-    id: "rios",
-    name: "Rios",
-    role: "Art Director & 3D/Environment Artist",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80",
-    bio: "Maestro del modelado 3D estilizado, iluminación ambiental y composición visual. Da forma a las atmósferas misteriosas y distópicas que definen la firma visual de PixelRift.",
-    skills: ["Blender", "Substance Painter", "Level Design", "Shader Graph", "Lighting"],
-    quote: "\"La iluminación cuenta más de la historia que diez líneas de diálogo.\"",
-    socials: {
-      artstation: "https://artstation.com",
-      twitter: "https://x.com",
-      portfolio: "/Nosotros/rios"
-    }
-  },
-  {
     id: "estefania",
-    name: "Estefania",
-    role: "Lead Narrative & UI/UX Specialist",
+    name: "Estefania Aristizabal",
+    isOwner: true,
+    ownerBadge: "Dueña & Co-Fundadora",
+    role: "Dueña & Co-Fundadora • Lead Narrative & UI/UX Specialist",
     avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80",
-    bio: "Diseñadora de interfaces intuitivas y universos narrativos profundos. Combina diseño centrado en el jugador con pixel art minucioso para crear menús y tramas inolvidables.",
-    skills: ["Figma", "UI / UX Gaming", "Narrativa Ramificada", "Aseprite", "Worldbuilding"],
+    bio: "Dueña y Co-Fundadora de NoisyStudios. Diseñadora de interfaces intuitivas y universos narrativos profundos. Combina diseño centrado en el jugador con pixel art minucioso para crear menús, interfaces no invasivas y tramas inolvidables.",
+    skills: ["Figma", "UI / UX Gaming", "Narrativa Ramificada", "Aseprite", "Worldbuilding", "Diseño de Sistemas"],
     quote: "\"La interfaz debe ser invisible; la emoción debe ser permanente.\"",
     socials: {
       behance: "https://behance.net",
       linkedin: "https://linkedin.com",
       portfolio: "/Nosotros/estefania"
+    }
+  },
+  {
+    id: "rios",
+    name: "Juan David Rios",
+    isOwner: true,
+    ownerBadge: "Dueño & Co-Fundador",
+    role: "Dueño & Co-Fundador • Art Director & 3D/Environment Artist",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80",
+    bio: "Dueño y Co-Fundador de NoisyStudios. Maestro del modelado 3D estilizado, iluminación ambiental y composición visual. Da forma a las atmósferas misteriosas y distópicas que definen la firma visual y estética de NoisyStudios.",
+    skills: ["Blender", "Substance Painter", "Level Design", "Shader Graph", "Lighting", "Composición Visual"],
+    quote: "\"La iluminación cuenta más de la historia que diez líneas de diálogo.\"",
+    socials: {
+      artstation: "https://artstation.com",
+      twitter: "https://x.com",
+      portfolio: "/Nosotros/rios"
     }
   }
 ];
@@ -317,7 +323,7 @@ export const studioValues = [
 export const socialChannels = [
   {
     name: "Discord",
-    handle: "Comunidad PixelRift",
+    handle: "Comunidad NoisyStudios",
     desc: "Devlogs exclusivos semanales, feedback directo de versiones alpha y sorteos para testers.",
     actionText: "Unirse al Discord",
     badge: "5,400+ Miembros",
@@ -326,16 +332,16 @@ export const socialChannels = [
   },
   {
     name: "Twitter / X",
-    handle: "@pixelrift_dev",
+    handle: "@noisystudios_dev",
     desc: "Actualizaciones rápidas, clips de gameplay, teasers de animación y noticias del estudio.",
-    actionText: "Seguir en @pixelrift",
+    actionText: "Seguir en @noisystudios",
     badge: "12.8K Seguidores",
     url: "https://x.com",
     icon: "twitter"
   },
   {
     name: "YouTube & Twitch",
-    handle: "PixelRift Studios",
+    handle: "NoisyStudios Oficial",
     desc: "Transmisiones en vivo de desarrollo, tutoriales de shaders y recapitulación de Game Jams.",
     actionText: "Suscribirse al canal",
     badge: "Transmisiones Semanales",
