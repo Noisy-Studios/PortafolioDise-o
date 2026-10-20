@@ -42,7 +42,7 @@ export function Estefa() {
           to="/Nosotros"
           className="inline-flex items-center gap-2 text-sm text-cyan-400 hover:text-cyan-300 font-mono transition-colors"
         >
-          <ArrowLeft className="w-4 h-4" /> Volver al equipo de Noisy Studios
+          <ArrowLeft className="w-4 h-4" /> Volver al equipo de NoisyStudios
         </Link>
 
         {/* Profile Header */}
