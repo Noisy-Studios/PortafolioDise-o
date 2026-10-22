@@ -17,8 +17,10 @@ export function PlayMiniGameModal({ prototype, isOpen, onClose }) {
 
   const baseUrl = import.meta.env.BASE_URL || "/";
   
-  // Apuntando exactamente a la ruta que tienes en la imagen
-  const gameUrl = `${baseUrl}Builds/GalacticDecree/index.html`;
+  // Si el prototipo trae un id específico (como "Milgatitos" o "GalacticDecree"), lo usa.
+  // De lo contrario, usa "Milgatitos" como opción por defecto.
+  const gameFolder = prototype?.id || "Milgatitos";
+  const gameUrl = `${baseUrl}Builds/${gameFolder}/index.html`;
 
   return (
     <div 
@@ -33,10 +35,10 @@ export function PlayMiniGameModal({ prototype, isOpen, onClose }) {
         <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#121627]">
           <div>
             <span className="text-xs font-mono text-cyan-400 block uppercase tracking-wider">
-              GALACTIC DECREE // BUILD WEBGL EN VIVO
+              {prototype?.event || "VERSIÓN DEMO EN VIVO"} // BUILD WEBGL
             </span>
             <h3 className="font-bold text-lg text-white font-heading">
-              {prototype?.title || "Galactic Decree"}
+              {prototype?.title || "Demostración Jugable"}
             </h3>
           </div>
 
@@ -53,7 +55,7 @@ export function PlayMiniGameModal({ prototype, isOpen, onClose }) {
         <div className="flex-1 w-full h-full bg-black relative">
           <iframe
             src={gameUrl}
-            title="Galactic Decree WebGL"
+            title={prototype?.title || "Juego WebGL"}
             className="w-full h-full border-0"
             allow="autoplay; fullscreen; gamepad; clipboard-read; clipboard-write"
           />
