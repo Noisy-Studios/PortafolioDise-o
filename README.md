@@ -1,6 +1,8 @@
 # Noisy Studios: Portfolio
 
-> Portafolio de desarrollo de videojuegos realizado por un equipo de tres estudiantes
+> Portafolio de desarrollo de videojuegos realizado por un equipo de tres estudiantes.
+
+## https://noisy-studios.github.io/PortafolioDise-o/
 
 Noisy es un estudio de videojuegos creado como parte de un proyecto académico. Este portafolio reúne nuestro proceso de trabajo, proyectos y aprendizajes a lo largo del desarrollo, mostrando nuestras habilidades en áreas como programación, diseño, arte y desarrollo de videojuegos.
 
