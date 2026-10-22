@@ -16,11 +16,22 @@ export function PlayMiniGameModal({ prototype, isOpen, onClose }) {
   if (!isOpen) return null;
 
   const baseUrl = import.meta.env.BASE_URL || "/";
-  
-  // Si el prototipo trae un id específico (como "Milgatitos" o "GalacticDecree"), lo usa.
-  // De lo contrario, usa "Milgatitos" como opción por defecto.
-  const gameFolder = prototype?.id || "Milgatitos";
-  const gameUrl = `${baseUrl}Builds/${gameFolder}/index.html`;
+  const gameId = prototype?.id || "Milgatitos";
+
+  // Función para definir qué URL cargar según el juego
+  const getGameUrl = (id) => {
+    switch (id) {
+      case "Tessera":
+        return "https://itch.io/embed-upload/19942661?color=121627";
+      case "Milgatitos":
+        return "https://itch.io/embed-upload/19942717?color=121627";
+      default:
+        // Carga la build local (por ejemplo, Galactic Decree u otros mini proyectos locales)
+        return `${baseUrl}Builds/${id}/index.html`;
+    }
+  };
+
+  const gameUrl = getGameUrl(gameId);
 
   return (
     <div 
@@ -35,7 +46,7 @@ export function PlayMiniGameModal({ prototype, isOpen, onClose }) {
         <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#121627]">
           <div>
             <span className="text-xs font-mono text-cyan-400 block uppercase tracking-wider">
-              {prototype?.event || "VERSIÓN DEMO EN VIVO"} // BUILD WEBGL
+              {prototype?.event || "VERSIÓN DEMO EN VIVO"} // WEBGL
             </span>
             <h3 className="font-bold text-lg text-white font-heading">
               {prototype?.title || "Demostración Jugable"}
@@ -51,7 +62,7 @@ export function PlayMiniGameModal({ prototype, isOpen, onClose }) {
           </button>
         </div>
 
-        {/* Visor del Juego en Vivo (Iframe WebGL) */}
+        {/* Visor del Juego en Vivo (Iframe) */}
         <div className="flex-1 w-full h-full bg-black relative">
           <iframe
             src={gameUrl}
