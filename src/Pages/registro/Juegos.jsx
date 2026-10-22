@@ -9,10 +9,7 @@ import {
   ChevronRight, 
   Trophy, 
   Flame, 
-  Clock, 
-  Layers, 
-  ArrowRight,
-  Filter
+  ArrowRight
 } from "lucide-react";
 import { 
   featuredGame, 
@@ -32,18 +29,19 @@ export function Juegos() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
 
+  // Categorías actualizadas: Todos los juegos, Plataformero, Estrategia, Roguelike
   const filterCategories = [
-    { id: "all", label: "Todos los Juegos" },
-    { id: "Acción", label: "Acción & Cyberpunk" },
-    { id: "RPG", label: "RPG & Estrategia" },
+    { id: "all", label: "Todos los juegos" },
+    { id: "Plataformero", label: "Plataformero" },
+    { id: "Estrategia", label: "Estrategia" },
     { id: "Roguelike", label: "Roguelike" },
   ];
 
   const filteredGames = gamesCatalog.filter((game) => {
     const matchesFilter =
       activeFilter === "all" ||
-      game.tags?.some((t) => t.toLowerCase() === activeFilter.toLowerCase()) ||
-      game.category?.toLowerCase().includes(activeFilter.toLowerCase());
+      game.category?.toLowerCase() === activeFilter.toLowerCase() ||
+      game.tags?.some((t) => t.toLowerCase() === activeFilter.toLowerCase());
 
     const matchesSearch =
       game.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -56,9 +54,7 @@ export function Juegos() {
     <div className="min-h-screen text-slate-100 pt-24 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
-        {/* =====================================================================
-            1. PAGE HEADER (Wireframe 2 - Title & Subtitle)
-        ===================================================================== */}
+        {/* 1. PAGE HEADER */}
         <section className="text-center md:text-left space-y-4 pt-6 border-b border-white/10 pb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/40 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-semibold">
             <Gamepad2 className="w-4 h-4 text-cyan-400" />
@@ -68,13 +64,11 @@ export function Juegos() {
             Juegos
           </h1>
           <p className="text-gray-400 text-base sm:text-lg max-w-3xl leading-relaxed">
-            Descubre nuestro catálogo de lanzamientos comerciales, títulos en producción activa y prototipos nacidos en Game Jams de 48 horas.
+            Descubre nuestro catálogo de lanzamientos comerciales, títulos en producción activa y prototipos de Game Jams.
           </p>
         </section>
 
-        {/* =====================================================================
-            2. JUEGO DESTACADO (Wireframe 2)
-        ===================================================================== */}
+        {/* 2. JUEGO DESTACADO */}
         <section className="space-y-8">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-6 bg-purple-500 rounded-full" />
@@ -84,7 +78,6 @@ export function Juegos() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#0d111d] border border-white/10 rounded-3xl p-6 md:p-10 shadow-2xl shadow-purple-950/20 relative overflow-hidden group">
-            {/* Left Image Showcase */}
             <div className="lg:col-span-7 relative rounded-2xl overflow-hidden aspect-[16/10] bg-[#14192b] border border-white/10 shadow-xl group/img">
               <img
                 src={featuredGame.coverImage}
@@ -107,7 +100,6 @@ export function Juegos() {
               </button>
             </div>
 
-            {/* Right Details */}
             <div className="lg:col-span-5 space-y-6">
               <div>
                 <h3 className="text-2xl sm:text-4xl font-extrabold text-white font-heading">
@@ -134,32 +126,18 @@ export function Juegos() {
               </p>
 
               <div className="flex flex-wrap items-center gap-3 pt-2">
-                <a
-                  href={featuredGame.steamUrl}
-                  target="_blank"
-                  rel="noreferrer"
+                <button
+                  onClick={() => setActiveJamPrototype(gameJamPrototypes[0])}
                   className="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-sm flex items-center gap-2 shadow-lg shadow-purple-600/30 transition-all cursor-pointer"
                 >
-                  Jugar en Steam <ChevronRight className="w-4 h-4" />
-                </a>
-
-                <button
-                  onClick={() => setSelectedTrailer({
-                    title: featuredGame.title,
-                    url: null
-                  })}
-                  className="px-5 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-gray-200 hover:text-white font-semibold text-sm border border-white/15 flex items-center gap-2 transition-all cursor-pointer"
-                >
-                  Ver Trailer <ExternalLink className="w-4 h-4" />
+                  Probar Prototipo WebGL <ChevronRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
           </div>
         </section>
 
-        {/* =====================================================================
-            3. WORK IN PROGRESS / EN DESARROLLO (Wireframe 2)
-        ===================================================================== */}
+        {/* 3. EN DESARROLLO (Solo Mil Gatitos y Tessera) */}
         <section className="space-y-8">
           <div>
             <div className="flex items-center gap-2 mb-2">
@@ -176,13 +154,12 @@ export function Juegos() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {gamesInProgress.map((game) => (
               <div
                 key={game.id}
                 className="group rounded-2xl bg-[#0f1322] border border-white/10 hover:border-cyan-500/40 p-5 space-y-4 transition-all duration-300 shadow-xl hover:-translate-y-1"
               >
-                {/* Visual Header */}
                 <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-gray-900 border border-white/5">
                   <img
                     src={game.image}
@@ -195,7 +172,6 @@ export function Juegos() {
                   </span>
                 </div>
 
-                {/* Info & Progress */}
                 <div>
                   <div className="flex items-center justify-between mb-1">
                     <h3 className="font-bold text-white text-lg font-heading">
@@ -210,7 +186,6 @@ export function Juegos() {
                   </p>
                 </div>
 
-                {/* Animated Progress Bar */}
                 <div className="space-y-1.5">
                   <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden p-[1px]">
                     <div
@@ -228,9 +203,7 @@ export function Juegos() {
           </div>
         </section>
 
-        {/* =====================================================================
-            4. TODOS NUESTROS JUEGOS (Wireframe 2)
-        ===================================================================== */}
+        {/* 4. TODOS NUESTROS JUEGOS */}
         <section className="space-y-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
@@ -242,7 +215,6 @@ export function Juegos() {
               </p>
             </div>
 
-            {/* Search Box */}
             <div className="relative w-full md:w-72">
               <Search className="w-4 h-4 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" />
               <input
@@ -255,7 +227,6 @@ export function Juegos() {
             </div>
           </div>
 
-          {/* Filter Pills */}
           <div className="flex flex-wrap gap-2">
             {filterCategories.map((cat) => (
               <button
@@ -272,8 +243,7 @@ export function Juegos() {
             ))}
           </div>
 
-          {/* Grid of games */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredGames.map((game) => (
               <div
                 key={game.id}
@@ -329,19 +299,16 @@ export function Juegos() {
           </div>
         </section>
 
-        {/* =====================================================================
-            5. JUEGO MÁS VENDIDO (Wireframe 2)
-        ===================================================================== */}
+        {/* 5. JUEGO MÁS ESPERADO (Mil Gatitos) */}
         <section className="space-y-6">
           <div className="flex items-center gap-2">
             <Trophy className="w-6 h-6 text-amber-400" />
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white font-heading">
-              Juego más vendido
+              Juego más esperado
             </h2>
           </div>
 
           <div className="relative rounded-3xl overflow-hidden bg-[#0d101c] border border-amber-500/30 shadow-2xl p-8 md:p-12">
-            {/* Background art */}
             <div className="absolute inset-0 z-0">
               <img
                 src={bestSellerGame.image}
@@ -353,7 +320,7 @@ export function Juegos() {
 
             <div className="relative z-10 max-w-2xl space-y-6">
               <span className="px-3.5 py-1.5 rounded-full text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 inline-flex items-center gap-1.5">
-                <Flame className="w-4 h-4 fill-amber-400" /> TÍTULO SUPERVENTAS
+                <Flame className="w-4 h-4 fill-amber-400" /> PRÓXIMO LANZAMIENTO
               </span>
 
               <h3 className="text-3xl sm:text-5xl font-extrabold text-white font-heading">
@@ -364,7 +331,6 @@ export function Juegos() {
                 {bestSellerGame.description}
               </p>
 
-              {/* Stats badges */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 <div className="p-3 rounded-xl bg-white/5 border border-white/10 font-mono text-sm text-cyan-300 font-bold">
                   ✓ {bestSellerGame.stat1}
@@ -374,10 +340,9 @@ export function Juegos() {
                 </div>
               </div>
 
-              {/* Purple button matching wireframe */}
               <div className="pt-4">
                 <button
-                  onClick={() => setSelectedGame(gamesCatalog[2])}
+                  onClick={() => setSelectedGame(gamesCatalog[0])}
                   className="px-8 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-500 active:scale-95 text-white font-bold text-sm shadow-xl shadow-purple-600/30 transition-all cursor-pointer flex items-center gap-2"
                 >
                   Conoce más <ChevronRight className="w-4 h-4" />
@@ -387,9 +352,7 @@ export function Juegos() {
           </div>
         </section>
 
-        {/* =====================================================================
-            6. PROTOTIPOS / GAME JAM (Wireframe 2)
-        ===================================================================== */}
+        {/* 6. PROTOTIPOS / GAME JAM (Solo Masquerade Dance) */}
         <section className="space-y-8">
           <div>
             <div className="flex items-center gap-2 mb-2">
@@ -406,7 +369,7 @@ export function Juegos() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {gameJamPrototypes.map((proto) => (
               <div
                 key={proto.id}
@@ -448,7 +411,7 @@ export function Juegos() {
                     type="button"
                     className="w-full py-2.5 px-3 rounded-xl bg-purple-600/30 group-hover:bg-purple-600 text-purple-200 group-hover:text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors border border-purple-500/40"
                   >
-                    <Play className="w-3.5 h-3.5 fill-current" /> Probar Prototipo
+                    <Play className="w-3.5 h-3.5 fill-current" /> Probar Build WebGL
                   </button>
                 </div>
               </div>
@@ -456,9 +419,7 @@ export function Juegos() {
           </div>
         </section>
 
-        {/* =====================================================================
-            7. BOTTOM CTA (Wireframe 2 - "Conoce al estudio ->")
-        ===================================================================== */}
+        {/* 7. BOTTOM CTA */}
         <section className="text-center pt-8 border-t border-white/10">
           <Link
             to="/Nosotros"

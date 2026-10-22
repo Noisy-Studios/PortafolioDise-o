@@ -1,351 +1,188 @@
-// Data for NoisyStudios Gaming Portfolio
-
 export const studioInfo = {
-  name: "NoisyStudios",
-  studioAlt: "NoisyStudios",
-  tagline: "Forjando experiencias interactivas memorables con pasión indie, arte minucioso y tecnología de vanguardia.",
-  description: "Estudio independiente liderado por David Saldarriaga, Estefania Aristizabal y Juan David Rios, enfocado en mecánicas de juego profundas, dirección de arte inmersiva y narrativas que conectan emocionalmente con los jugadores.",
-  mission: "Creemos que los videojuegos son el arte más completo de nuestra era. NoisyStudios nació para demostrar que equipos pequeños y enfocados pueden crear experiencias que compiten en innovación y emoción con cualquier gran estudio. Cada proyecto es una obsesión colectiva.",
-  email: "hola@noisystudios.dev",
-  pressEmail: "press@noisystudios.dev",
-  supportEmail: "support@noisystudios.dev",
-  discordUrl: "https://discord.gg/noisystudios",
-  twitterUrl: "https://x.com/noisystudios_dev",
-  youtubeUrl: "https://youtube.com/@noisystudios",
-  steamUrl: "https://store.steampowered.com",
-  githubUrl: "https://github.com",
+  name: "PixelRift Studios",
+  tagline: "Forjando mundos donde cada píxel respira emoción.",
+  mission: "Demostrar que los pequeños estudios independientes pueden crear experiencias mecánicas profundas y memorables mediante un desarrollo ágil y pulido artesanal.",
+  email: "hola@pixelrift.dev",
+  pressEmail: "press@pixelrift.dev",
+  supportEmail: "soporte@pixelrift.dev",
+  discordUrl: "https://discord.com",
+  twitterUrl: "https://twitter.com",
+  youtubeUrl: "https://youtube.com",
+  githubUrl: "https://github.com/Juandavid1612"
 };
 
 export const featuredGame = {
-  id: "aetheria-echoes",
-  title: "Aetheria: Echoes of the Void",
-  category: "Acción - ACCION/AVENTURA - ACCION 2D",
-  genre: "Metroidvania / Cyberpunk",
-  year: "2025",
-  rating: "98% Positivas",
-  tags: ["2024", "Steam", "Indie", "Retro"],
-  bannerImage: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1600&q=80",
-  coverImage: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&q=80",
-  gallery: [
-    "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&w=800&q=80"
-  ],
-  quote: "Una odisea hiper-estilizada a través de ruinas biocibernéticas. Combina combate fluido y acrobático con un sistema de magia sintética adaptativa y pixel art de vanguardia.",
-  description: "Despierta como un guardián cibernético en las profundidades de un mundo colapsado. Domina armas cinéticas, desentraña misterios arcanos y enfrenta jefes colosales en una experiencia audiovisual electrizante.",
-  price: "$19.99 USD",
-  discount: "-15%",
+  id: "GalacticDecree",
+  title: "Galactic Decree",
+  category: "Roguelike / Gestión",
+  coverImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+  bannerImage: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80",
+  quote: "Un roguelike de gestión de recursos donde cada decreto cuenta para mantener con vida a tu reino espacial.",
   steamUrl: "https://store.steampowered.com",
-  trailerEmbed: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1",
+  tags: ["Roguelike", "Gestión", "Estrategia"]
 };
 
-export const techStack = [
-  {
-    name: "Unity",
-    role: "MOTOR",
-    desc: "Motor principal para prototipado ágil y sistemas de física 2D/3D.",
-    color: "from-blue-500/20 to-indigo-500/10",
-    border: "group-hover:border-blue-500/50",
-    iconKey: "unity"
-  },
-  {
-    name: "Unreal Engine",
-    role: "MOTOR",
-    desc: "Pipeline de renderizado de alta fidelidad e iluminación Nanite/Lumen.",
-    color: "from-slate-500/20 to-zinc-500/10",
-    border: "group-hover:border-cyan-400/50",
-    iconKey: "unreal"
-  },
-  {
-    name: "C#",
-    role: "LENGUAJE",
-    desc: "Lógica de jugabilidad robusta, arquitectura ECS y comportamientos de IA.",
-    color: "from-purple-500/20 to-violet-500/10",
-    border: "group-hover:border-purple-500/50",
-    iconKey: "csharp"
-  },
-  {
-    name: "C++ & Utilería",
-    role: "UTILIDAD",
-    desc: "Herramientas internas de build, optimización de memoria y scripts nativos.",
-    color: "from-cyan-500/20 to-blue-500/10",
-    border: "group-hover:border-cyan-500/50",
-    iconKey: "tools"
-  },
-  {
-    name: "Blender",
-    role: "ARTE 3D",
-    desc: "Modelado low-poly, texturizado estilizado y animación de personajes.",
-    color: "from-orange-500/20 to-amber-500/10",
-    border: "group-hover:border-orange-500/50",
-    iconKey: "blender"
-  },
-  {
-    name: "Aseprite",
-    role: "PIXEL ART",
-    desc: "Diseño de sprites cuadro por cuadro, paletas retro y animaciones fluidas.",
-    color: "from-yellow-500/20 to-orange-500/10",
-    border: "group-hover:border-yellow-500/50",
-    iconKey: "aseprite"
-  },
-  {
-    name: "FMOD",
-    role: "AUDIO",
-    desc: "Banda sonora reactiva, paisajismo acústico espacial y efectos de impacto.",
-    color: "from-red-500/20 to-rose-500/10",
-    border: "group-hover:border-red-500/50",
-    iconKey: "fmod"
-  },
-  {
-    name: "Git",
-    role: "CONTROL",
-    desc: "Flujo colaborativo GitFlow, gestión de versiones y LFS para assets pesados.",
-    color: "from-rose-500/20 to-pink-500/10",
-    border: "group-hover:border-rose-500/50",
-    iconKey: "git"
-  },
-  {
-    name: "Shader Graph",
-    role: "SHADERS",
-    desc: "Efectos visuales volumétricos, distorsiones retro y shaders de agua/cristal.",
-    color: "from-emerald-500/20 to-teal-500/10",
-    border: "group-hover:border-emerald-500/50",
-    iconKey: "shader"
-  },
-  {
-    name: "Steam SDK",
-    role: "PLATAFORMA",
-    desc: "Logros, guardado en la nube Steam Cloud, leaderboards y multijugador.",
-    color: "from-sky-500/20 to-blue-500/10",
-    border: "group-hover:border-sky-500/50",
-    iconKey: "steam"
-  }
-];
-
-export const gamesCatalog = [
-  {
-    id: "cyberphantom",
-    title: "CyberPhantom: Protocol 0",
-    year: "2024",
-    price: "$19.99 USD",
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=700&q=80",
-    badges: ["PC", "En Stock", "Edición de Lujo"],
-    description: "Infiltración táctica en una metrópolis controlada por megacorporaciones corrompidas.",
-    tags: ["Acción", "Sigilo", "Cyberpunk"],
-    rating: "9.2/10"
-  },
-  {
-    id: "runeblade",
-    title: "Rune Blade: Legacy",
-    year: "2024",
-    price: "$14.99 USD",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=700&q=80",
-    badges: ["PC", "En Stock", "Edición Estándar"],
-    description: "RPG táctico por turnos donde runas ancestrales desatan combos demoledores.",
-    tags: ["RPG", "Estrategia", "Fantasía"],
-    rating: "8.9/10"
-  },
-  {
-    id: "neon-abyss",
-    title: "Neon Horizon: Rebirth",
-    year: "2023",
-    price: "$18.50 USD",
-    image: "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&w=700&q=80",
-    badges: ["PC", "En Stock", "Edición de Lujo"],
-    description: "Roguelike vertiginoso en mazmorras neón procedurales con armas combinables alocadas.",
-    tags: ["Roguelike", "Pixel Art", "Arcade"],
-    rating: "9.5/10"
-  },
-  {
-    id: "void-walker",
-    title: "Void Walker: Deep Space",
-    year: "2023",
-    price: "$24.99 USD",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=700&q=80",
-    badges: ["PC", "En Stock", "Coleccionista"],
-    description: "Sobrevive a bordo de una nave espacial a la deriva mientras una anomalía cuántica la desgasta.",
-    tags: ["Terror Sci-Fi", "Supervivencia", "3D"],
-    rating: "9.1/10"
-  }
-];
-
+// 1. EN DESARROLLO (Mil Gatitos y Tessera)
 export const gamesInProgress = [
   {
-    id: "kinetic-drift",
-    title: "Kinetic Drift",
-    genre: "Anti-Gravity Racing / Synthwave",
-    progress: 75,
+    id: "Milgatitos",
+    title: "Mil Gatitos",
+    genre: "Plataformero",
+    progress: 65,
     statusText: "EN PRODUCCIÓN ACTIVA",
-    phase: "Beta Testing y Balance de Físicas",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=700&q=80",
-    desc: "Carreras anti-gravedad a más de 800 km/h en pistas que serpentean entre rascacielos flotantes."
+    phase: "Diseño de Niveles & Animación 2D",
+    desc: "Aventura de plataformas adorable donde debes rescatar a mil felinos perdidos en mundos oníricos.",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: "chronos-fall",
-    title: "Chronos Fall",
-    genre: "Action Roguelite / Manipulación Temporal",
-    progress: 45,
-    statusText: "EN PRODUCCIÓN ACTIVA",
-    phase: "Implementación de IA de Jefes & Nivel 4",
-    image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=700&q=80",
-    desc: "Rebobina el tiempo 5 segundos para esquivar ataques letales y cooperar con tus propios clones pasados."
-  },
-  {
-    id: "project-nebula",
-    title: "Project Nebula",
-    genre: "Exploración Cósmica / Narrativa 2D",
-    progress: 25,
-    statusText: "PRE-PRODUCCIÓN ACTIVA",
-    phase: "Prototipado de mecánicas y Concept Art",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=80",
-    desc: "Repara satélites en soledad mientras interceptas transmisiones de civilizaciones olvidadas."
+    id: "Tessera",
+    title: "Tessera: Ancient Rome",
+    genre: "Estrategia",
+    progress: 40,
+    statusText: "FASE DE PLAYTESTING",
+    phase: "Balance de Mecánicas y UI",
+    desc: "Juego de dados tipo Yahtzee por turnos ambientado en la antigua Roma con cartas modificadoras y apuestas.",
+    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80"
   }
 ];
 
+// 2. TODOS NUESTROS JUEGOS
+export const gamesCatalog = [
+  {
+    id: "Milgatitos",
+    title: "Mil Gatitos",
+    category: "Plataformero",
+    description: "Plataformero dinámico con físicas fluidas y un centenar de secretos por descubrir.",
+    year: "2024",
+    price: "$12.99 USD",
+    badges: ["PC / WebGL", "En Stock", "Plataformero"],
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
+    tags: ["Plataformero"]
+  },
+  {
+    id: "Tessera",
+    title: "Tessera: Ancient Rome",
+    category: "Estrategia",
+    description: "Juego de dados por turnos tipo Yahtzee en la antigua Roma con cartas modificadoras y apuestas.",
+    year: "2024",
+    price: "$9.99 USD",
+    badges: ["PC / WebGL", "Estrategia", "Dados"],
+    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
+    tags: ["Estrategia"]
+  },
+  {
+    id: "GalacticDecree",
+    title: "Galactic Decree",
+    category: "Roguelike",
+    description: "Roguelike de gestión de recursos donde intentas mantener tu reino con vida la mayor cantidad de tiempo posible.",
+    year: "2023",
+    price: "$18.50 USD",
+    badges: ["PC / WebGL", "Roguelike", "Gestión"],
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+    tags: ["Roguelike"]
+  }
+];
+
+// 3. JUEGO MÁS ESPERADO (Mil Gatitos)
 export const bestSellerGame = {
-  title: "Neon Horizon: Rebirth",
-  subtitle: "Nuestro mayor hito indie hasta la fecha",
-  stat1: "+85,000 Copias Vendidas",
-  stat2: "96% Calificación Positiva en Steam",
-  stat3: "Ganador 'Mejor Arte y Música' Indie Showcase",
-  description: "Una experiencia frenética alabada por la crítica por su impecable control, banda sonora chiptune-electro y alta rejugabilidad.",
-  image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80"
+  id: "Milgatitos",
+  title: "Mil Gatitos",
+  description: "Nuestra próxima gran apuesta independiente. Un plataformas lleno de carisma, arte dibujado a mano y retos mecánicos memorables que cautivará a toda la comunidad.",
+  stat1: "+50,000 Listas de Deseos en Steam",
+  stat2: "Lanzamiento Global Q3 2025",
+  image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
 };
 
+// 4. PROTOTIPOS / GAME JAM (Masquerade Dance)
 export const gameJamPrototypes = [
   {
-    id: "jam-1",
-    num: "Game 1",
-    title: "Resonance: Dark Echoes",
-    desc: "Exploración de sonido en cavernas oscuras donde el audio es el único sistema de navegación disponible.",
-    tags: ["Exploración", "Audio"],
-    event: "Global Game Jam 2024",
-    demoPlayable: true
-  },
-  {
-    id: "jam-2",
-    num: "Game 2",
-    title: "Shift Matrix",
-    desc: "Puzzle de física antigravitatoria creado en 48 horas. Rota salas enteras para resolver acertijos mecánicos.",
-    tags: ["Puzzle", "Física"],
-    event: "Ludum Dare 54",
-    demoPlayable: true
-  },
-  {
-    id: "jam-3",
-    num: "Game 3",
-    title: "Glitch Samurai",
-    desc: "Combate de reflejos donde los fotogramas congelados revelan las debilidades del enemigo en tiempo real.",
-    tags: ["Acción", "Reflejos"],
-    event: "GMTK Game Jam 2023",
-    demoPlayable: true
-  },
-  {
-    id: "jam-4",
-    num: "Game 4",
-    title: "Overload Pulse",
-    desc: "Gestión de energía y calor en una estación geotérmica colapsando durante una tormenta iónica.",
-    tags: ["Estrategia", "Supervivencia"],
-    event: "Indie Spain Jam",
-    demoPlayable: true
+    id: "MasqueradeDance",
+    num: "Jam 01",
+    title: "Masquerade Dance",
+    event: "Global Game Jam 2025",
+    desc: "Juego de terror y misterio en el que debes investigar e investigar una oscura escena del crimen oculta tras un baile de máscaras.",
+    tags: ["Terror", "Investigación", "48h"]
   }
 ];
 
 export const teamMembers = [
   {
     id: "david",
-    name: "David Saldarriaga",
-    isOwner: true,
-    ownerBadge: "Dueño & Co-Fundador",
-    role: "Dueño & Co-Fundador • Lead Game Developer & Systems Architect",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80",
-    bio: "Dueño y Co-Fundador de NoisyStudios. Especialista en arquitectura de motores en C#, pipelines en Unity/Unreal y optimización de rendimiento a bajo nivel. Obsesionado con que cada input se sienta inmediato, responsivo y placentero.",
-    skills: ["C#", "Unity Engine", "Arquitectura ECS", "Físicas 2D/3D", "Optimización de Motores", "C++"],
-    quote: "\"El mejor código es aquel que el jugador no nota pero siente en cada movimiento.\"",
-    socials: {
-      github: "https://github.com",
-      linkedin: "https://linkedin.com",
-      portfolio: "/Nosotros/david"
-    }
-  },
-  {
-    id: "estefania",
-    name: "Estefania Aristizabal",
-    isOwner: true,
-    ownerBadge: "Dueña & Co-Fundadora",
-    role: "Dueña & Co-Fundadora • Lead Narrative & UI/UX Specialist",
-    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80",
-    bio: "Dueña y Co-Fundadora de NoisyStudios. Diseñadora de interfaces intuitivas y universos narrativos profundos. Combina diseño centrado en el jugador con pixel art minucioso para crear menús, interfaces no invasivas y tramas inolvidables.",
-    skills: ["Figma", "UI / UX Gaming", "Narrativa Ramificada", "Aseprite", "Worldbuilding", "Diseño de Sistemas"],
-    quote: "\"La interfaz debe ser invisible; la emoción debe ser permanente.\"",
-    socials: {
-      behance: "https://behance.net",
-      linkedin: "https://linkedin.com",
-      portfolio: "/Nosotros/estefania"
-    }
+    name: "Juan David",
+    role: "Lead Gameplay & Systems Developer",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
+    bio: "Especialista en programación C# en Unity, físicas personalizadas, árboles de comportamiento de IA y optimización de rendimiento.",
+    skills: ["Unity", "C#", "DOTween", "Cinemachine", "URP", "Git"]
   },
   {
     id: "rios",
-    name: "Juan David Rios",
-    isOwner: true,
-    ownerBadge: "Dueño & Co-Fundador",
-    role: "Dueño & Co-Fundador • Art Director & 3D/Environment Artist",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80",
-    bio: "Dueño y Co-Fundador de NoisyStudios. Maestro del modelado 3D estilizado, iluminación ambiental y composición visual. Da forma a las atmósferas misteriosas y distópicas que definen la firma visual y estética de NoisyStudios.",
-    skills: ["Blender", "Substance Painter", "Level Design", "Shader Graph", "Lighting", "Composición Visual"],
-    quote: "\"La iluminación cuenta más de la historia que diez líneas de diálogo.\"",
-    socials: {
-      artstation: "https://artstation.com",
-      twitter: "https://x.com",
-      portfolio: "/Nosotros/rios"
-    }
+    name: "Ríos",
+    role: "3D Environment & Technical Artist",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+    bio: "Apasionado por la dirección artística, modelado hard-surface en Blender, shaders personalizados y post-procesado visual.",
+    skills: ["Blender", "Substance Painter", "HLSL Shaders", "Iluminación", "Maya"]
+  },
+  {
+    id: "estefania",
+    name: "Estefanía",
+    role: "UX/UI Designer & Narrative Lead",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80",
+    bio: "Encargada de la experiencia de usuario, wireframes en Figma, diseño de interfaces adaptables y flujos narrativos con Fungus.",
+    skills: ["Figma", "React", "Tailwind CSS", "Fungus", "Diseño UI/UX"]
   }
 ];
 
 export const studioValues = [
   {
-    title: "Pasión & Jugabilidad Primero",
-    desc: "No seguimos tendencias vacías. Diseñamos las mecánicas que nosotros mismos soñamos con jugar, puliendo el 'game feel' hasta el milisegundo.",
-    icon: "gamepad"
+    title: "Jugabilidad Primero",
+    desc: "Priorizamos un control ultra responsivo y mecánicas divertidas por encima de cualquier otro apartado."
   },
   {
-    title: "Innovación Técnica & Visual",
-    desc: "Aprovechamos herramientas modernas de shaders, audio procedimental y diseño sistémico para competir al más alto nivel.",
-    icon: "sparkles"
+    title: "Pasión Artesanal",
+    desc: "Cada shader, línea de diálogo y píxel es pulido minuciosamente por nuestro equipo independiente."
   },
   {
-    title: "Transparencia con la Comunidad",
-    desc: "Compartimos nuestro proceso a través de devlogs abiertos, builds de prueba y comunicación sincera con nuestros jugadores.",
-    icon: "users"
+    title: "Comunidad Activa",
+    desc: "Involucramos a los jugadores desde las primeras fases de prototipado mediante playtests abiertos."
   }
 ];
 
 export const socialChannels = [
   {
-    name: "Discord",
-    handle: "Comunidad NoisyStudios",
-    desc: "Devlogs exclusivos semanales, feedback directo de versiones alpha y sorteos para testers.",
-    actionText: "Unirse al Discord",
-    badge: "5,400+ Miembros",
-    url: "https://discord.gg",
-    icon: "discord"
+    name: "Servidor Discord",
+    handle: "@pixelrift-devs",
+    desc: "Únete a nuestra comunidad para debatir sobre desarrollo, participar en playtests y hablar con los creadores.",
+    badge: "15K+ MIEMBROS",
+    url: "https://discord.com",
+    actionText: "Unirme al servidor"
   },
   {
     name: "Twitter / X",
-    handle: "@noisystudios_dev",
-    desc: "Actualizaciones rápidas, clips de gameplay, teasers de animación y noticias del estudio.",
-    actionText: "Seguir en @noisystudios",
-    badge: "12.8K Seguidores",
-    url: "https://x.com",
-    icon: "twitter"
+    handle: "@PixelRiftGames",
+    desc: "GIFs diarios de desarrollo, vistazos al código, arte conceptual y anuncios de lanzamientos.",
+    badge: "ACTIVO DIARIO",
+    url: "https://twitter.com",
+    actionText: "Seguir en Twitter"
   },
   {
-    name: "YouTube & Twitch",
-    handle: "NoisyStudios Oficial",
-    desc: "Transmisiones en vivo de desarrollo, tutoriales de shaders y recapitulación de Game Jams.",
-    actionText: "Suscribirse al canal",
-    badge: "Transmisiones Semanales",
+    name: "Canal de YouTube",
+    handle: "@PixelRiftStudios",
+    desc: "Devlogs en profundidad, tutoriales de optimización en Unity y trailers cinemáticos oficiales.",
+    badge: "ESTRENOS HD",
     url: "https://youtube.com",
-    icon: "youtube"
+    actionText: "Suscribirme"
   }
+];
+
+export const techStack = [
+  { name: "Unity 2022.3", role: "Motor Principal", iconKey: "unity", desc: "Plataforma core para el desarrollo de nuestros juegos en PC y WebGL." },
+  { name: "C# Scripting", role: "Lógica & Sistemas", iconKey: "csharp", desc: "Programación robusta de mecánicas, interfaces y sistemas de guardado." },
+  { name: "React 19", role: "Web & Portafolio", iconKey: "react", desc: "Estructura frontend modular para nuestra web interactiva y portafolios." },
+  { name: "Tailwind CSS", role: "Estilos & Diseño", iconKey: "tailwind", desc: "Sistema de diseño adaptable para móvil, tablet y escritorio." },
+  { name: "Blender 3D", role: "Modelado & Assets", iconKey: "blender", desc: "Modelado 3D de entornos, personajes y props optimizados." },
+  { name: "Autodesk Maya", role: "Rigging & Animación", iconKey: "maya", desc: "Esqueletos y animaciones fluidas para enemigos y protagonistas." },
+  { name: "Git & GitHub", role: "Control de Versiones", iconKey: "github", desc: "Gestión colaborativa de código y despliegue continuo." },
+  { name: "Figma", role: "Prototipado UI/UX", iconKey: "figma", desc: "Diseño de wireframes en alta fidelidad y flujos de usuario." },
+  { name: "Adobe Premiere", role: "Edición Audiovisual", iconKey: "premiere", desc: "Montaje de trailers oficiales y clips promocionales para redes." },
+  { name: "DOTween", role: "Animación UI", iconKey: "dotween", desc: "Librería de interpolación fluida para interfaces y menús." }
 ];
