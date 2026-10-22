@@ -53,7 +53,7 @@ export function Juegos() {
   };
 
   return (
-    <div className="min-h-screen text-slate-100 pt-24 pb-20">
+    <div className="min-h-screen text-slate-100 pt-32 md:pt-24 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
         {/* =====================================================================
@@ -252,7 +252,7 @@ export function Juegos() {
               <button
                 key={cat.id}
                 onClick={() => setActiveFilter(cat.id)}
-                className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${
+                className={`min-h-11 px-4 py-2 rounded-full text-xs font-medium transition-all cursor-pointer ${
                   activeFilter === cat.id
                     ? "bg-purple-600 text-white font-semibold shadow-md shadow-purple-600/30"
                     : "bg-[#121627] text-gray-400 hover:text-white border border-white/5"
