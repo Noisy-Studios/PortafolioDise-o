@@ -36,11 +36,26 @@ export function PlayableGameModal({ game, isOpen, onClose }) {
 
   if (!isOpen || !game) return null;
 
-  // Build full URL for the Unity WebGL build
+  // Build full URL for the Unity WebGL build (Itch.io para Tessera / Mil Gatitos, Local para Galactic Decree)
   const baseUrl = import.meta.env.BASE_URL || "/";
   const normalizedBase = baseUrl.endsWith("/") ? baseUrl : `${baseUrl}/`;
-  const buildPath = game.buildPath?.startsWith("/") ? game.buildPath.slice(1) : game.buildPath;
-  const gameUrl = `${normalizedBase}${buildPath}`;
+
+  const getGameUrl = (gameObj) => {
+    const id = gameObj?.id || gameObj?.title || "";
+
+    if (id === "Tessera" || id.toLowerCase().includes("tessera")) {
+      return "https://itch.io/embed-upload/19942661?color=121627";
+    }
+    if (id === "Milgatitos" || id.toLowerCase().includes("gatitos")) {
+      return "https://itch.io/embed-upload/19942717?color=121627";
+    }
+
+    // Default: Build local (Galactic Decree, etc.)
+    const buildPath = gameObj?.buildPath?.startsWith("/") ? gameObj.buildPath.slice(1) : gameObj?.buildPath;
+    return `${normalizedBase}${buildPath}`;
+  };
+
+  const gameUrl = getGameUrl(game);
 
   const toggleFullscreen = () => {
     if (!containerRef.current) return;
