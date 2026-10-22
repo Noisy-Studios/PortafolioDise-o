@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { Sparkles, Image as ImageIcon, Eye, ArrowLeft, Filter } from "lucide-react";
 import { gamesCatalog } from "../../data/portfolioData";
 import GameDetailModal from "../../components/GameDetailModal";

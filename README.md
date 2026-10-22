@@ -2,6 +2,8 @@
 
 > Portafolio de desarrollo de videojuegos realizado por un equipo de tres estudiantes.
 
+## https://noisy-studios.github.io/PortafolioDise-o/
+
 Noisy es un estudio de videojuegos creado como parte de un proyecto académico. Este portafolio reúne nuestro proceso de trabajo, proyectos y aprendizajes a lo largo del desarrollo, mostrando nuestras habilidades en áreas como programación, diseño, arte y desarrollo de videojuegos.
 
 <img width="1628" height="16" alt="Divider" src="https://github.com/user-attachments/assets/1d8e9763-f5c5-427a-8158-d1a8ddcde2eb" />

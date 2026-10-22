@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { Gamepad2, ArrowUp, Heart, Sparkles, MessageSquare } from "lucide-react";
 import { TwitterIcon, YoutubeIcon, GithubIcon, DiscordIcon } from "./SocialIcons";
 import { studioInfo } from "../data/portfolioData";
@@ -26,7 +26,7 @@ export function Footer() {
                 </div>
               </div>
               <span className="font-heading font-black tracking-wider text-xl text-white">
-                PIXELRIFT
+                NoisyStudios
               </span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
@@ -112,7 +112,7 @@ export function Footer() {
         {/* Bottom Bar: Legal + Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-            <span>© 2024 PIXELRIFT STUDIOS. Todos los derechos reservados.</span>
+            <span>© 2024 NoisyStudios. Todos los derechos reservados.</span>
             <span>•</span>
             <a href="#terminos" className="hover:text-gray-300 transition-colors">Aviso Legal</a>
             <span>•</span>

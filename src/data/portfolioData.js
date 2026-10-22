@@ -1,188 +1,354 @@
+// Data for Noisy Studios Gaming Portfolio
+import galacticDecreeImg from "../assets/GalacticDecree.jpeg";
+import milGatitosImg from "../assets/MilGatitos.jpeg";
+import tesseraImg from "../assets/Tessera.jpeg";
+
 export const studioInfo = {
-  name: "PixelRift Studios",
-  tagline: "Forjando mundos donde cada píxel respira emoción.",
-  mission: "Demostrar que los pequeños estudios independientes pueden crear experiencias mecánicas profundas y memorables mediante un desarrollo ágil y pulido artesanal.",
-  email: "hola@pixelrift.dev",
-  pressEmail: "press@pixelrift.dev",
-  supportEmail: "soporte@pixelrift.dev",
-  discordUrl: "https://discord.com",
-  twitterUrl: "https://twitter.com",
-  youtubeUrl: "https://youtube.com",
-  githubUrl: "https://github.com/Juandavid1612"
-};
-
-export const featuredGame = {
-  id: "GalacticDecree",
-  title: "Galactic Decree",
-  category: "Roguelike / Gestión",
-  coverImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
-  bannerImage: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80",
-  quote: "Un roguelike de gestión de recursos donde cada decreto cuenta para mantener con vida a tu reino espacial.",
+  name: "Noisy Studios",
+  studioAlt: "Noisy Studios",
+  tagline: "Forjando experiencias interactivas memorables con pasión indie, arte minucioso y tecnología de vanguardia.",
+  description: "Estudio independiente formado por estudiantes universitarios (David Saldarriaga, Estefania Aristizabal y Juan David Rios), enfocado en mecánicas de juego profundas, dirección de arte inmersiva y narrativas que conectan emocionalmente con los jugadores.",
+  mission: "Creemos que los videojuegos son el arte más completo de nuestra era. Noisy Studios nació para demostrar que equipos pequeños y enfocados pueden crear experiencias que compiten en innovación y emoción. Cada proyecto es una obsesión colectiva.",
+  email: "hola@noisystudios.dev",
+  pressEmail: "press@noisystudios.dev",
+  supportEmail: "support@noisystudios.dev",
+  discordUrl: "https://discord.gg/noisystudios",
+  twitterUrl: "https://x.com/noisystudios_dev",
+  youtubeUrl: "https://youtube.com/@noisystudios",
   steamUrl: "https://store.steampowered.com",
-  tags: ["Roguelike", "Gestión", "Estrategia"]
+  githubUrl: "https://github.com",
 };
 
-// 1. EN DESARROLLO (Mil Gatitos y Tessera)
-export const gamesInProgress = [
-  {
-    id: "Milgatitos",
-    title: "Mil Gatitos",
-    genre: "Plataformero",
-    progress: 65,
-    statusText: "EN PRODUCCIÓN ACTIVA",
-    phase: "Diseño de Niveles & Animación 2D",
-    desc: "Aventura de plataformas adorable donde debes rescatar a mil felinos perdidos en mundos oníricos.",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: "Tessera",
-    title: "Tessera: Ancient Rome",
-    genre: "Estrategia",
-    progress: 40,
-    statusText: "FASE DE PLAYTESTING",
-    phase: "Balance de Mecánicas y UI",
-    desc: "Juego de dados tipo Yahtzee por turnos ambientado en la antigua Roma con cartas modificadoras y apuestas.",
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80"
-  }
-];
+// 1. Featured Game: Galactic Decree (only single image, playable in browser)
+export const featuredGame = {
+  id: "galactic-decree",
+  title: "Galactic Decree",
+  category: "Estrategia - COMBATE ESPACIAL - UNITY 3D",
+  genre: "Estrategia & Simulación Espacial",
+  year: "2024",
+  rating: "+100 Jugadores",
+  tags: ["2024", "Unity WebGL", "Estrategia", "Playable"],
+  coverImage: galacticDecreeImg,
+  image: galacticDecreeImg,
+  bannerImage: galacticDecreeImg,
+  buildPath: "Builds/GalacticDecree/index.html",
+  quote: "Una odisea táctica donde el mando estelar exige decisiones estratégicas rápidas para preservar el orden cósmico.",
+  description: "Toma el mando en un conflicto estelar táctico. Toma decisiones que alteran el equilibrio diplomático y militar de la galaxia en esta experiencia desarrollada en Unity por estudiantes de Noisy Studios.",
+  price: "Gratis en Navegador",
+  isPlayable: true
+};
 
-// 2. TODOS NUESTROS JUEGOS
+// 2. The 3 real games of Noisy Studios
 export const gamesCatalog = [
   {
-    id: "Milgatitos",
-    title: "Mil Gatitos",
-    category: "Plataformero",
-    description: "Plataformero dinámico con físicas fluidas y un centenar de secretos por descubrir.",
-    year: "2024",
-    price: "$12.99 USD",
-    badges: ["PC / WebGL", "En Stock", "Plataformero"],
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    tags: ["Plataformero"]
-  },
-  {
-    id: "Tessera",
-    title: "Tessera: Ancient Rome",
-    category: "Estrategia",
-    description: "Juego de dados por turnos tipo Yahtzee en la antigua Roma con cartas modificadoras y apuestas.",
-    year: "2024",
-    price: "$9.99 USD",
-    badges: ["PC / WebGL", "Estrategia", "Dados"],
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
-    tags: ["Estrategia"]
-  },
-  {
-    id: "GalacticDecree",
+    id: "galactic-decree",
     title: "Galactic Decree",
-    category: "Roguelike",
-    description: "Roguelike de gestión de recursos donde intentas mantener tu reino con vida la mayor cantidad de tiempo posible.",
-    year: "2023",
-    price: "$18.50 USD",
-    badges: ["PC / WebGL", "Roguelike", "Gestión"],
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
-    tags: ["Roguelike"]
+    year: "2024",
+    price: "Gratis WebGL",
+    image: galacticDecreeImg,
+    coverImage: galacticDecreeImg,
+    buildPath: "Builds/GalacticDecree/index.html",
+    badges: ["PC WebGL", "Playable", "Proyecto Universitario"],
+    description: "Estrategia y combate espacial donde el jugador toma decisiones críticas que alteran el equilibrio galáctico.",
+    tags: ["Estrategia", "Espacial", "Unity 3D"],
+    rating: "+100 Jugadores",
+    isPlayable: true
+  },
+  {
+    id: "mil-gatitos",
+    title: "Mil Gatitos",
+    year: "2024",
+    price: "Gratis WebGL",
+    image: milGatitosImg,
+    coverImage: milGatitosImg,
+    buildPath: "Builds/Milgatitos/index.html",
+    badges: ["PC WebGL", "Playable", "Proyecto Universitario"],
+    description: "Experiencia interactiva y dinámica con cientos de gatitos simultáneos en pantalla con físicas lúdicas.",
+    tags: ["Aventura", "Casual", "Unity"],
+    rating: "+100 Descargas",
+    isPlayable: true
+  },
+  {
+    id: "tessera",
+    title: "Tessera",
+    year: "2024",
+    price: "Gratis WebGL",
+    image: tesseraImg,
+    coverImage: tesseraImg,
+    buildPath: "Builds/Tessera/index.html",
+    badges: ["PC WebGL", "Playable", "Proyecto Universitario"],
+    description: "Puzzles y mecánicas espaciales basadas en geometría, perspectiva y resolución lógica de laberintos.",
+    tags: ["Puzzle", "Geometría", "Unity"],
+    rating: "+100 Partidas",
+    isPlayable: true
   }
 ];
 
-// 3. JUEGO MÁS ESPERADO (Mil Gatitos)
+export const gamesInProgress = [
+  {
+    id: "galactic-decree-update",
+    title: "Galactic Decree: Expansión de Flota",
+    genre: "Estrategia Espacial / Unity",
+    progress: 80,
+    statusText: "EN DESARROLLO ACTIVO",
+    phase: "Balance de Unidades y Nuevas Misiones",
+    image: galacticDecreeImg,
+    buildPath: "Builds/GalacticDecree/index.html",
+    desc: "Ampliación de batallas tácticas y nuevos sistemas de comando estelar.",
+    isPlayable: true
+  },
+  {
+    id: "mil-gatitos-update",
+    title: "Mil Gatitos: Modo Desafío",
+    genre: "Aventura Casual / Físicas",
+    progress: 65,
+    statusText: "EN DESARROLLO ACTIVO",
+    phase: "Nuevas Interacciones y Animaciones",
+    image: milGatitosImg,
+    buildPath: "Builds/Milgatitos/index.html",
+    desc: "Añadiendo modos contra reloj y eventos dinámicos en la simulación.",
+    isPlayable: true
+  },
+  {
+    id: "tessera-update",
+    title: "Tessera: Nuevos Niveles",
+    genre: "Puzzle & Perspectiva / Lógica",
+    progress: 50,
+    statusText: "EN DESARROLLO ACTIVO",
+    phase: "Diseño de Rompecabezas Complejos",
+    image: tesseraImg,
+    buildPath: "Builds/Tessera/index.html",
+    desc: "Incorporación de mecánicas de rotación tridimensional en laberintos.",
+    isPlayable: true
+  }
+];
+
 export const bestSellerGame = {
-  id: "Milgatitos",
-  title: "Mil Gatitos",
-  description: "Nuestra próxima gran apuesta independiente. Un plataformas lleno de carisma, arte dibujado a mano y retos mecánicos memorables que cautivará a toda la comunidad.",
-  stat1: "+50,000 Listas de Deseos en Steam",
-  stat2: "Lanzamiento Global Q3 2025",
-  image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
+  title: "Galactic Decree",
+  subtitle: "Nuestro proyecto universitario insignia",
+  stat1: "+100 Descargas",
+  stat2: "+100 Jugadores",
+  stat3: "Desarrollado en Unity WebGL",
+  description: "Proyecto destacado del estudio desarrollado por el equipo de Noisy Studios, optimizado para ejecutarse de forma fluida directamente en tu navegador.",
+  image: galacticDecreeImg,
+  buildPath: "Builds/GalacticDecree/index.html",
+  isPlayable: true
 };
 
-// 4. PROTOTIPOS / GAME JAM (Masquerade Dance)
 export const gameJamPrototypes = [
   {
-    id: "MasqueradeDance",
-    num: "Jam 01",
-    title: "Masquerade Dance",
-    event: "Global Game Jam 2025",
-    desc: "Juego de terror y misterio en el que debes investigar e investigar una oscura escena del crimen oculta tras un baile de máscaras.",
-    tags: ["Terror", "Investigación", "48h"]
+    id: "jam-1",
+    num: "Juego 1",
+    title: "Galactic Decree",
+    desc: "Estrategia espacial nacida como prototipo de exploración táctica y mecánicas de mando.",
+    tags: ["Estrategia", "Unity WebGL"],
+    event: "Proyecto Noisy Studios",
+    image: galacticDecreeImg,
+    buildPath: "Builds/GalacticDecree/index.html",
+    demoPlayable: true
+  },
+  {
+    id: "jam-2",
+    num: "Juego 2",
+    title: "Mil Gatitos",
+    desc: "Simulación dinámica de físicas y cientos de entidades en pantalla.",
+    tags: ["Físicas", "Casual"],
+    event: "Proyecto Noisy Studios",
+    image: milGatitosImg,
+    buildPath: "Builds/Milgatitos/index.html",
+    demoPlayable: true
+  },
+  {
+    id: "jam-3",
+    num: "Juego 3",
+    title: "Tessera",
+    desc: "Rompecabezas geométrico de perspectiva espacial y resolución lógica.",
+    tags: ["Puzzle", "Geometría"],
+    event: "Proyecto Noisy Studios",
+    image: tesseraImg,
+    buildPath: "Builds/Tessera/index.html",
+    demoPlayable: true
+  }
+];
+
+export const techStack = [
+  {
+    name: "Unity",
+    role: "MOTOR",
+    desc: "Motor principal para prototipado ágil y sistemas de física 2D/3D.",
+    color: "from-blue-500/20 to-indigo-500/10",
+    border: "group-hover:border-blue-500/50",
+    iconKey: "unity"
+  },
+  {
+    name: "Unreal Engine",
+    role: "MOTOR",
+    desc: "Pipeline de renderizado e iluminación avanzada para proyectos experimentales.",
+    color: "from-slate-500/20 to-zinc-500/10",
+    border: "group-hover:border-cyan-400/50",
+    iconKey: "unreal"
+  },
+  {
+    name: "C#",
+    role: "LENGUAJE",
+    desc: "Lógica de jugabilidad robusta, arquitectura ECS y comportamientos.",
+    color: "from-purple-500/20 to-violet-500/10",
+    border: "group-hover:border-purple-500/50",
+    iconKey: "csharp"
+  },
+  {
+    name: "C++ & Utilería",
+    role: "UTILIDAD",
+    desc: "Herramientas de optimización de memoria y scripts de desarrollo.",
+    color: "from-cyan-500/20 to-blue-500/10",
+    border: "group-hover:border-cyan-500/50",
+    iconKey: "tools"
+  },
+  {
+    name: "Blender",
+    role: "ARTE 3D",
+    desc: "Modelado low-poly, texturizado estilizado y animación de modelos.",
+    color: "from-orange-500/20 to-amber-500/10",
+    border: "group-hover:border-orange-500/50",
+    iconKey: "blender"
+  },
+  {
+    name: "Aseprite",
+    role: "PIXEL ART",
+    desc: "Diseño de sprites, paletas retro y texturas 2D.",
+    color: "from-yellow-500/20 to-orange-500/10",
+    border: "group-hover:border-yellow-500/50",
+    iconKey: "aseprite"
+  },
+  {
+    name: "FMOD",
+    role: "AUDIO",
+    desc: "Banda sonora reactiva y paisajismo sonoro.",
+    color: "from-red-500/20 to-rose-500/10",
+    border: "group-hover:border-red-500/50",
+    iconKey: "fmod"
+  },
+  {
+    name: "Git",
+    role: "CONTROL",
+    desc: "Gestión colaborativa de código y control de versiones del equipo.",
+    color: "from-rose-500/20 to-pink-500/10",
+    border: "group-hover:border-rose-500/50",
+    iconKey: "git"
+  },
+  {
+    name: "Shader Graph",
+    role: "SHADERS",
+    desc: "Efectos visuales de iluminación y materiales en tiempo real.",
+    color: "from-emerald-500/20 to-teal-500/10",
+    border: "group-hover:border-emerald-500/50",
+    iconKey: "shader"
+  },
+  {
+    name: "Steam & WebGL",
+    role: "PLATAFORMA",
+    desc: "Compilación optimizada WebGL para ejecución inmediata en navegadores.",
+    color: "from-sky-500/20 to-blue-500/10",
+    border: "group-hover:border-sky-500/50",
+    iconKey: "steam"
   }
 ];
 
 export const teamMembers = [
   {
     id: "david",
-    name: "Juan David",
-    role: "Lead Gameplay & Systems Developer",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
-    bio: "Especialista en programación C# en Unity, físicas personalizadas, árboles de comportamiento de IA y optimización de rendimiento.",
-    skills: ["Unity", "C#", "DOTween", "Cinemachine", "URP", "Git"]
-  },
-  {
-    id: "rios",
-    name: "Ríos",
-    role: "3D Environment & Technical Artist",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
-    bio: "Apasionado por la dirección artística, modelado hard-surface en Blender, shaders personalizados y post-procesado visual.",
-    skills: ["Blender", "Substance Painter", "HLSL Shaders", "Iluminación", "Maya"]
+    name: "David Saldarriaga",
+    isOwner: true,
+    ownerBadge: "Dueño & Co-Fundador",
+    role: "Dueño & Co-Fundador • Lead Game Developer & Systems Architect",
+    avatar: "", // Placeholder as requested
+    bio: "Dueño y Co-Fundador de Noisy Studios. Estudiante universitario especializado en arquitectura en C#, programación de físicas en Unity y compilaciones WebGL para navegador.",
+    skills: ["C#", "Unity Engine", "Arquitectura ECS", "Físicas 2D/3D", "WebGL Optimization", "Git"],
+    quote: "\"El mejor código es aquel que el jugador no nota pero siente en cada movimiento.\"",
+    socials: {
+      github: "https://github.com",
+      linkedin: "https://linkedin.com",
+      portfolio: "/Nosotros/david"
+    }
   },
   {
     id: "estefania",
-    name: "Estefanía",
-    role: "UX/UI Designer & Narrative Lead",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80",
-    bio: "Encargada de la experiencia de usuario, wireframes en Figma, diseño de interfaces adaptables y flujos narrativos con Fungus.",
-    skills: ["Figma", "React", "Tailwind CSS", "Fungus", "Diseño UI/UX"]
+    name: "Estefania Aristizabal",
+    isOwner: true,
+    ownerBadge: "Dueña & Co-Fundadora",
+    role: "Dueña & Co-Fundadora • Lead Narrative & UI/UX Specialist",
+    avatar: "", // Placeholder as requested
+    bio: "Dueña y Co-Fundadora de Noisy Studios. Estudiante universitaria enfocada en diseño de interfaces limpias, pixel art e historias que enriquecen los tres juegos del estudio.",
+    skills: ["Figma", "UI / UX Gaming", "Narrativa Ramificada", "Aseprite", "Worldbuilding", "Diseño de Sistemas"],
+    quote: "\"La interfaz debe ser invisible; la emoción debe ser permanente.\"",
+    socials: {
+      behance: "https://behance.net",
+      linkedin: "https://linkedin.com",
+      portfolio: "/Nosotros/estefania"
+    }
+  },
+  {
+    id: "rios",
+    name: "Juan David Rios",
+    isOwner: true,
+    ownerBadge: "Dueño & Co-Fundador",
+    role: "Dueño & Co-Fundador • Art Director & 3D/Environment Artist",
+    avatar: "", // Placeholder as requested
+    bio: "Dueño y Co-Fundador de Noisy Studios. Estudiante universitario y creador del arte tridimensional, modelado en Blender e iluminación volumétrica de nuestros proyectos.",
+    skills: ["Blender", "Substance Painter", "Level Design", "Shader Graph", "Lighting", "Composición Visual"],
+    quote: "\"La iluminación cuenta más de la historia que diez líneas de diálogo.\"",
+    socials: {
+      artstation: "https://artstation.com",
+      twitter: "https://x.com",
+      portfolio: "/Nosotros/rios"
+    }
   }
 ];
 
 export const studioValues = [
   {
-    title: "Jugabilidad Primero",
-    desc: "Priorizamos un control ultra responsivo y mecánicas divertidas por encima de cualquier otro apartado."
+    title: "Pasión & Jugabilidad Primero",
+    desc: "Como equipo universitario, creamos las experiencias que nosotros mismos soñamos con jugar, puliendo la respuesta y el game feel.",
+    icon: "gamepad"
   },
   {
-    title: "Pasión Artesanal",
-    desc: "Cada shader, línea de diálogo y píxel es pulido minuciosamente por nuestro equipo independiente."
+    title: "Innovación Técnica en WebGL",
+    desc: "Optimizamos cada proyecto para que cualquier jugador pueda disfrutarlo al instante en su navegador sin instalaciones pesadas.",
+    icon: "sparkles"
   },
   {
-    title: "Comunidad Activa",
-    desc: "Involucramos a los jugadores desde las primeras fases de prototipado mediante playtests abiertos."
+    title: "Desarrollo Colaborativo y Transparente",
+    desc: "Compartimos nuestro proceso de aprendizaje y recibimos con entusiasmo las sugerencias de la comunidad universitaria.",
+    icon: "users"
   }
 ];
 
 export const socialChannels = [
   {
-    name: "Servidor Discord",
-    handle: "@pixelrift-devs",
-    desc: "Únete a nuestra comunidad para debatir sobre desarrollo, participar en playtests y hablar con los creadores.",
-    badge: "15K+ MIEMBROS",
-    url: "https://discord.com",
-    actionText: "Unirme al servidor"
+    name: "Discord",
+    handle: "Comunidad Noisy Studios",
+    desc: "Comunidad oficial de Noisy Studios, playtests y feedback directo con los desarrolladores.",
+    actionText: "Unirse al Discord",
+    badge: "Comunidad Activa",
+    url: "https://discord.gg/noisystudios",
+    icon: "discord"
   },
   {
     name: "Twitter / X",
-    handle: "@PixelRiftGames",
-    desc: "GIFs diarios de desarrollo, vistazos al código, arte conceptual y anuncios de lanzamientos.",
-    badge: "ACTIVO DIARIO",
-    url: "https://twitter.com",
-    actionText: "Seguir en Twitter"
+    handle: "@noisystudios_dev",
+    desc: "Avances rápidos de desarrollo de Galactic Decree, Mil Gatitos y Tessera.",
+    actionText: "Seguir en @noisystudios",
+    badge: "Actualizaciones",
+    url: "https://x.com/noisystudios_dev",
+    icon: "twitter"
   },
   {
-    name: "Canal de YouTube",
-    handle: "@PixelRiftStudios",
-    desc: "Devlogs en profundidad, tutoriales de optimización en Unity y trailers cinemáticos oficiales.",
-    badge: "ESTRENOS HD",
-    url: "https://youtube.com",
-    actionText: "Suscribirme"
+    name: "YouTube & Twitch",
+    handle: "Noisy Studios Oficial",
+    desc: "Demostraciones de jugabilidad y devlogs de nuestros proyectos universitarios.",
+    actionText: "Suscribirse al canal",
+    badge: "Demostraciones",
+    url: "https://youtube.com/@noisystudios",
+    icon: "youtube"
   }
-];
-
-export const techStack = [
-  { name: "Unity 2022.3", role: "Motor Principal", iconKey: "unity", desc: "Plataforma core para el desarrollo de nuestros juegos en PC y WebGL." },
-  { name: "C# Scripting", role: "Lógica & Sistemas", iconKey: "csharp", desc: "Programación robusta de mecánicas, interfaces y sistemas de guardado." },
-  { name: "React 19", role: "Web & Portafolio", iconKey: "react", desc: "Estructura frontend modular para nuestra web interactiva y portafolios." },
-  { name: "Tailwind CSS", role: "Estilos & Diseño", iconKey: "tailwind", desc: "Sistema de diseño adaptable para móvil, tablet y escritorio." },
-  { name: "Blender 3D", role: "Modelado & Assets", iconKey: "blender", desc: "Modelado 3D de entornos, personajes y props optimizados." },
-  { name: "Autodesk Maya", role: "Rigging & Animación", iconKey: "maya", desc: "Esqueletos y animaciones fluidas para enemigos y protagonistas." },
-  { name: "Git & GitHub", role: "Control de Versiones", iconKey: "github", desc: "Gestión colaborativa de código y despliegue continuo." },
-  { name: "Figma", role: "Prototipado UI/UX", iconKey: "figma", desc: "Diseño de wireframes en alta fidelidad y flujos de usuario." },
-  { name: "Adobe Premiere", role: "Edición Audiovisual", iconKey: "premiere", desc: "Montaje de trailers oficiales y clips promocionales para redes." },
-  { name: "DOTween", role: "Animación UI", iconKey: "dotween", desc: "Librería de interpolación fluida para interfaces y menús." }
 ];
