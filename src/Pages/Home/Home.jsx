@@ -32,12 +32,12 @@ export function Home() {
   };
 
   return (
-    <div className="min-h-screen text-slate-100 pt-20">
+    <div className="min-h-screen text-slate-100 pt-28 md:pt-20">
       
       {/* =========================================================================
           HERO SECTION (Wireframe 1 - Top large banner & subtitle)
       ========================================================================= */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden border-b border-white/5 py-16 md:py-24">
+      <section className="relative min-h-[70svh] md:min-h-[80vh] flex items-center justify-center overflow-hidden border-b border-white/5 py-12 md:py-24">
         {/* Cinematic Background Image with Gradient Overlay */}
         <div className="absolute inset-0 z-0">
           <img
