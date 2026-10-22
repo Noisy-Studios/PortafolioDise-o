@@ -25,13 +25,13 @@ export function Nosotros() {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen text-slate-100 pt-24 pb-20 bg-[#080a0f]">
+    <div className="min-h-screen text-slate-100 pt-32 md:pt-24 pb-20 bg-[#080a0f]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
         {/* =====================================================================
             1. HERO & SOMOS (Wireframe 3 - Noisy Studios)
         ===================================================================== */}
-        <section className="space-y-6 pt-6">
+        <section className="space-y-6 pt-2 md:pt-6">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-6 bg-cyan-400 rounded-full" />
             <span className="text-xs font-mono font-bold uppercase tracking-widest text-cyan-400">
