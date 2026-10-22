@@ -34,7 +34,7 @@ export function Estefa() {
   ];
 
   return (
-    <div className="min-h-screen text-slate-100 pt-28 pb-20">
+    <div className="min-h-screen text-slate-100 pt-36 md:pt-28 pb-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Back Link */}
