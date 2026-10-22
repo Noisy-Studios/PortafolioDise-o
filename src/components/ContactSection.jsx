@@ -213,7 +213,7 @@ export function ContactSection({ showHeader = true }) {
                   </span>
                   <button
                     onClick={() => handleCopy(card.email)}
-                    className="p-1 rounded-md text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
+                    className="flex min-h-11 min-w-11 items-center justify-center rounded-md text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
                     title="Copiar correo"
                   >
                     {copiedEmail === card.email ? (

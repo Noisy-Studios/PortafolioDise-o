@@ -16,7 +16,7 @@ export function Contactanos() {
   const [selectedCommunity, setSelectedCommunity] = useState(null);
 
   return (
-    <div className="min-h-screen text-slate-100 pt-24 pb-20">
+    <div className="min-h-screen text-slate-100 pt-32 md:pt-24 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
         {/* =====================================================================
