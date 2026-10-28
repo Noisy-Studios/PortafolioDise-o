@@ -247,7 +247,7 @@ export function Rios() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-cyan-950/40 via-transparent to-transparent" />
                 <span className="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-black/70 text-cyan-300 font-mono text-[9px] border border-cyan-500/30">
-                  DEV // 04
+                  :P
                 </span>
               </div>
 
