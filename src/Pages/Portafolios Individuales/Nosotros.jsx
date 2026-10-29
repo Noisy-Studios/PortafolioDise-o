@@ -161,14 +161,21 @@ export function Nosotros() {
                     </span>
                   </div>
 
-                  {/* Circular Avatar Placeholder - EMPTY IMAGE AS REQUESTED */}
                   <Link
                     to={targetUrl}
                     className="relative mb-6 mt-2 block group/avatar cursor-pointer"
                     title={`Ver perfil de ${member.name}`}
                   >
                     <div className="w-32 h-32 rounded-full bg-[#161c30] border-2 border-purple-500/40 flex items-center justify-center text-gray-500 shadow-xl group-hover:border-cyan-400 group-hover:scale-105 transition-all duration-300">
-                      <User className="w-14 h-14 text-purple-400/50 group-hover:text-cyan-400/70 transition-colors" />
+                      {member.avatar ? (
+                        <img
+                          src={member.avatar}
+                          alt={`Retrato de ${member.name}`}
+                          className="h-full w-full rounded-full object-cover object-[center_35%]"
+                        />
+                      ) : (
+                        <User className="w-14 h-14 text-purple-400/50 group-hover:text-cyan-400/70 transition-colors" />
+                      )}
                     </div>
                     <span className="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-emerald-400 border-2 border-[#0f1322]" title="Activo" />
                   </Link>

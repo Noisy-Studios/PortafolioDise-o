@@ -2,6 +2,7 @@
 import galacticDecreeImg from "../assets/GalacticDecree.jpeg";
 import milGatitosImg from "../assets/MilGatitos.jpeg";
 import tesseraImg from "../assets/Tessera.jpeg";
+import davidPhoto from "../assets/Foto David (2).jpeg";
 
 export const studioInfo = {
   name: "Noisy Studios",
@@ -261,7 +262,7 @@ export const teamMembers = [
     isOwner: true,
     ownerBadge: "Dueño & Co-Fundador",
     role: "Dueño & Co-Fundador • Lead Game Developer & Systems Architect",
-    avatar: "", // Placeholder as requested
+    avatar: davidPhoto,
     bio: "Dueño y Co-Fundador de Noisy Studios. Estudiante universitario especializado en arquitectura en C#, programación de físicas en Unity y compilaciones WebGL para navegador.",
     skills: ["C#", "Unity Engine", "Arquitectura ECS", "Físicas 2D/3D", "WebGL Optimization", "Git"],
     quote: "\"El mejor código es aquel que el jugador no nota pero siente en cada movimiento.\"",
