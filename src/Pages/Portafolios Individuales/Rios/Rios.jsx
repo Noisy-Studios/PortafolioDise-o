@@ -367,7 +367,7 @@ export function Rios() {
                 MUSEO RIOS // UNITY EXPERIENCE
               </h2>
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-2xl">
-                Explora el museo interactivo en 3D desarrollado en Unity WebGL. Sumérgete en la galería virtual y recorre los proyectos de Juan David Ríos directamente en tu navegador sin errores de audio.
+                Explora el museo interactivo en 3D desarrollado en Unity WebGL. Sumérgete en la galería virtual y recorre los proyectos de Juan David Ríos directamente en tu navegador.
               </p>
             </div>
 
@@ -390,20 +390,21 @@ export function Rios() {
             </div>
           </div>
 
-          {/* REPRODUCTOR IFRAME DE ITCH.IO */}
+          {/* REPRODUCTOR IFRAME DE ITCH.IO CON EL NUEVO LINK */}
           {isPlayingMuseo && (
             <div className="mt-6 pt-6 border-t border-cyan-500/30 animate-in fade-in duration-300">
               <div className="relative w-full aspect-[16/9] bg-black rounded-2xl overflow-hidden border border-cyan-500/50 shadow-2xl flex items-center justify-center">
                 <iframe
-                  src="https://itch.io/embed-upload/20106332?color=333333"
+                  src="https://itch.io/embed-upload/20115855?color=333333"
                   title="Museo Rios Itch.io Embed"
                   className="w-full h-full border-0"
+                  allow="autoplay; fullscreen; encrypted-media; picture-in-picture; gamepad"
                   allowFullScreen
                 />
               </div>
               <div className="flex items-center justify-between mt-3 font-mono text-[11px] text-gray-400 px-2">
-                <span>Estado: <strong className="text-emerald-400">Transmitiendo desde Itch.io (Servidor WebGL Optimizado)</strong></span>
-                <span>Haz clic dentro de la pantalla para activar el audio y los controles</span>
+                <span>Estado: <strong className="text-emerald-400">Transmitiendo desde Itch.io (Build Actualizada)</strong></span>
+                <span>Haz clic dentro de la pantalla para activar el video y el audio</span>
               </div>
             </div>
           )}
