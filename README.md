@@ -16,6 +16,14 @@ Noisy es un estudio de videojuegos creado como parte de un proyecto académico. 
 
 <img width="1628" height="16" alt="Divider" src="https://github.com/user-attachments/assets/1d8e9763-f5c5-427a-8158-d1a8ddcde2eb" />
 
+### Final:
+
+<img width="1844" height="896" alt="image" src="https://github.com/user-attachments/assets/270e91fc-5f53-444b-93c6-f3300859a648" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/56b1f7a3-5b95-4390-a48c-38acf8615a19" />
+<img width="1851" height="901" alt="image" src="https://github.com/user-attachments/assets/b1339912-e0c0-49d9-b8f9-ffa9b3c90de2" />
+<img width="1042" height="694" alt="image" src="https://github.com/user-attachments/assets/0c9af424-0eba-4aaa-8785-b8d7e852b7c6" />
+
+
 ### Wireframes:
 
 #### Desktop:
