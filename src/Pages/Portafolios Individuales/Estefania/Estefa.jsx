@@ -2,8 +2,18 @@ import { teamMembers } from "../../../data/portfolioData";
 import ProfilePortfolio from "../../../components/ProfilePortfolio";
 import MagicRoom from "./MagicRoom";
 
+// Importación de la foto de Estefanía desde assets
+import tefaFoto from "../../../assets/tefa.jpg"; // Asegúrate de que la ruta coincida con la estructura de tu proyecto
+
 export function Estefa() {
   const member = teamMembers.find((person) => person.id === "estefania") ?? teamMembers[2];
+
+  // Si ProfilePortfolio acepta una prop de avatar personalizada, se la inyectamos, 
+  // o creamos una copia del objeto miembro con la foto de perfil actualizada:
+  const memberWithPhoto = {
+    ...member,
+    avatar: tefaFoto,
+  };
 
   const projects = [
     { title: "Biblia de universo y lore: Aetheria", category: "WORLDBUILDING", tech: "Narrativa / Diseño de mundo", description: "Documento de referencia que define la cosmología, las facciones y las historias que dan coherencia al universo del juego." },
@@ -14,7 +24,7 @@ export function Estefa() {
   return (
     <>
       <ProfilePortfolio
-        member={member}
+        member={memberWithPhoto}
         specialty="Diseño narrativo & UI/UX para videojuegos"
         biographyTitle="De las historias a interfaces que acompañan la aventura"
         biography={[

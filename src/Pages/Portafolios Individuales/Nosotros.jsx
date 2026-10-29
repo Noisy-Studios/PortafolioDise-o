@@ -20,8 +20,9 @@ import {
 } from "lucide-react";
 import { teamMembers, studioValues, studioInfo } from "../../data/portfolioData";
 
-// Importación de la foto de Ríos desde assets
+// Importación de fotos desde assets
 import riosFoto from "../../assets/rios foto.jpg";
+import tefaFoto from "../../assets/tefa.jpg"; // Asegúrate de que el nombre del archivo coincida exactamente en tu carpeta assets
 
 export function Nosotros() {
   const [careerModalOpen, setCareerModalOpen] = useState(false);
@@ -129,7 +130,7 @@ export function Nosotros() {
         </section>
 
         {/* =====================================================================
-            3. LOS DUEÑOS & EL EQUIPO FUNDADOR (Wireframe 3 - Placeholders & "Mi espacio")
+            3. LOS DUEÑOS & EL EQUIPO FUNDADOR
         ===================================================================== */}
         <section className="space-y-8" id="equipo">
           <div className="text-center md:text-left">
@@ -147,11 +148,12 @@ export function Nosotros() {
             </p>
           </div>
 
-          {/* 3 Circular Avatar Cards matching Wireframe 3 */}
+          {/* Tarjetas del Equipo */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamMembers.map((member) => {
               const targetUrl = member.socials?.portfolio || `/Nosotros/${member.id}`;
               const isRios = member.id === "rios";
+              const isTefa = member.id === "estefania" || member.name.toLowerCase().includes("estefania");
 
               return (
                 <div
@@ -174,6 +176,12 @@ export function Nosotros() {
                       {isRios ? (
                         <img
                           src={riosFoto}
+                          alt={member.name}
+                          className="w-full h-full object-cover filter brightness-95 group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : isTefa ? (
+                        <img
+                          src={tefaFoto}
                           alt={member.name}
                           className="w-full h-full object-cover filter brightness-95 group-hover:scale-105 transition-transform duration-500"
                         />
@@ -208,10 +216,6 @@ export function Nosotros() {
                     {member.bio}
                   </p>
 
-                  {/* Buttons per requirement:
-                      1. "Sobre mí" navigates to the portfolio destination (where Ficha previously went).
-                      2. "Mi espacio" button is without functionality (no redirect, no action).
-                  */}
                   <div className="mt-auto w-full flex flex-col sm:flex-row gap-2">
                     <Link
                       to={targetUrl}
@@ -220,7 +224,6 @@ export function Nosotros() {
                       Sobre mí <ChevronRight className="w-3.5 h-3.5" />
                     </Link>
 
-                    {/* Button renamed to "Mi espacio" without functionality */}
                     <button
                       type="button"
                       disabled
@@ -239,7 +242,7 @@ export function Nosotros() {
         </section>
 
         {/* =====================================================================
-            4. NUESTROS VALORES (Wireframe 3 - 3 Circular Badges/Cards)
+            4. NUESTROS VALORES
         ===================================================================== */}
         <section className="space-y-8">
           <div className="text-center md:text-left">
@@ -279,7 +282,7 @@ export function Nosotros() {
         </section>
 
         {/* =====================================================================
-            5. ¿QUIERES SER PARTE DE NUESTRO EQUIPO? (Wireframe 3)
+            5. ¿QUIERES SER PARTE DE NUESTRO EQUIPO?
         ===================================================================== */}
         <section className="text-center p-10 sm:p-14 rounded-3xl bg-gradient-to-r from-purple-950/40 via-[#101426] to-cyan-950/40 border border-purple-500/30 shadow-2xl space-y-6">
           <h2 className="text-2xl sm:text-4xl font-extrabold text-white font-heading">
@@ -301,7 +304,7 @@ export function Nosotros() {
 
       </div>
 
-      {/* Career / Colaboración Modal */}
+      {/* Career Modal */}
       {careerModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
           <div className="relative w-full max-w-lg bg-[#0f1320] border border-purple-500/30 rounded-2xl p-6 sm:p-8 space-y-5 text-left">
