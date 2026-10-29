@@ -20,6 +20,9 @@ import {
 } from "lucide-react";
 import { teamMembers, studioValues, studioInfo } from "../../data/portfolioData";
 
+// Importación de la foto de Ríos desde assets
+import riosFoto from "../../assets/rios foto.jpg";
+
 export function Nosotros() {
   const [careerModalOpen, setCareerModalOpen] = useState(false);
   const location = useLocation();
@@ -51,19 +54,19 @@ export function Nosotros() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 text-gray-300 text-base sm:text-lg leading-relaxed">
             <div className="lg:col-span-6 space-y-4">
               <p>
-                <strong>Noisy Studios</strong> es un estudio independiente de videojuegos formado por estudiantes universitarios y liderado por sus tres dueños: <strong>David Saldarriaga</strong>, <strong>Estefania Aristizabal</strong> y <strong>Juan David Rios</strong>.
+                <strong>Noisy Studios</strong> es un estudio independiente de videojuegos formado por estudiantes universitarios y liderado por sus tres dueños: <strong>David Saldarriaga</strong>, <strong>Estefania Aristizabal</strong> y <strong>Juan David Rios</strong>[cite: 8].
               </p>
               <p>
-                Creemos que los videojuegos son el medio interactivo definitivo. Diseñamos, programamos y pulimos nuestros proyectos con el objetivo de brindar experiencias accesibles y divertidas directamente desde el navegador web.
+                Creemos que los videojuegos son el medio interactivo definitivo. Diseñamos, programamos y pulimos nuestros proyectos con el objetivo de brindar experiencias accesibles y divertidas directamente desde el navegador web[cite: 8].
               </p>
             </div>
             <div className="lg:col-span-6 space-y-4">
               <p>
-                Actualmente contamos con <strong>3 títulos publicados</strong>: <em>Galactic Decree</em>, <em>Mil Gatitos</em> y <em>Tessera</em>, todos desarrollados en Unity y optimizados mediante compilaciones WebGL para una experiencia inmediata.
+                Actualmente contamos con <strong>3 títulos publicados</strong>: <em>Galactic Decree</em>, <em>Mil Gatitos</em> y <em>Tessera</em>, todos desarrollados en Unity y optimizados mediante compilaciones WebGL para una experiencia inmediata[cite: 8].
               </p>
               <div className="p-4 rounded-xl bg-purple-950/30 border border-purple-500/30 text-purple-200 text-sm font-mono flex items-center gap-3 shadow-lg">
                 <Crown className="w-5 h-5 text-amber-400 shrink-0" />
-                <span>3 Proyectos Activos • Dirección Creativa y Técnica por sus fundadores.</span>
+                <span>3 Proyectos Activos • Dirección Creativa y Técnica por sus fundadores[cite: 8].</span>
               </div>
             </div>
           </div>
@@ -113,13 +116,13 @@ export function Nosotros() {
 
             <div className="lg:col-span-7 space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed">
               <p>
-                <strong>Noisy Studios</strong> nació en el entorno universitario de la mano de <strong>David Saldarriaga</strong>, <strong>Estefania Aristizabal</strong> y <strong>Juan David Rios</strong>, unidos por la curiosidad de entender cómo se crean los videojuegos desde sus cimientos.
+                <strong>Noisy Studios</strong> nació en el entorno universitario de la mano de <strong>David Saldarriaga</strong>, <strong>Estefania Aristizabal</strong> y <strong>Juan David Rios</strong>, unidos por la curiosidad de entender cómo se crean los videojuegos desde sus cimientos[cite: 8].
               </p>
               <p>
-                Lo que comenzó como ejercicios académicos y pruebas técnicas en Unity dio vida a nuestros primeros 3 títulos: la estrategia galáctica de <em>Galactic Decree</em>, las divertidas físicas de <em>Mil Gatitos</em> y los rompecabezas de perspectiva en <em>Tessera</em>.
+                Lo que comenzó como ejercicios académicos y pruebas técnicas en Unity dio vida a nuestros primeros 3 títulos: la estrategia galáctica de <em>Galactic Decree</em>, las divertidas físicas de <em>Mil Gatitos</em> y los rompecabezas de perspectiva en <em>Tessera</em>[cite: 8].
               </p>
               <p>
-                Cada uno de nosotros asume un área clave: arquitectura de código, narrativa y diseño de interfaz, y modelado artístico 3D.
+                Cada uno de nosotros asume un área clave: arquitectura de código, narrativa y diseño de interfaz, y modelado artístico 3D[cite: 8].
               </p>
             </div>
           </div>
@@ -140,14 +143,15 @@ export function Nosotros() {
               El equipo fundador
             </h2>
             <p className="text-gray-400 text-sm mt-1 max-w-2xl">
-              Conoce a los tres líderes y propietarios de Noisy Studios. Haz clic en "Sobre mí" para conocer el perfil y trabajo de cada uno.
+              Conoce a los tres líderes y propietarios de Noisy Studios[cite: 8]. Haz clic en "Sobre mí" para conocer el perfil y trabajo de cada uno[cite: 8].
             </p>
           </div>
 
-          {/* 3 Circular Avatar Cards matching Wireframe 3 - With PLACEHOLDERS */}
+          {/* 3 Circular Avatar Cards matching Wireframe 3 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamMembers.map((member) => {
               const targetUrl = member.socials?.portfolio || `/Nosotros/${member.id}`;
+              const isRios = member.id === "rios";
 
               return (
                 <div
@@ -166,8 +170,14 @@ export function Nosotros() {
                     className="relative mb-6 mt-2 block group/avatar cursor-pointer"
                     title={`Ver perfil de ${member.name}`}
                   >
-                    <div className="w-32 h-32 rounded-full bg-[#161c30] border-2 border-purple-500/40 flex items-center justify-center text-gray-500 shadow-xl group-hover:border-cyan-400 group-hover:scale-105 transition-all duration-300">
-                      {member.avatar ? (
+                    <div className="w-32 h-32 rounded-full bg-[#161c30] border-2 border-purple-500/40 flex items-center justify-center text-gray-500 shadow-xl overflow-hidden group-hover:border-cyan-400 group-hover:scale-105 transition-all duration-300">
+                      {isRios ? (
+                        <img
+                          src={riosFoto}
+                          alt={member.name}
+                          className="w-full h-full object-cover filter brightness-95 group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : member.avatar ? (
                         <img
                           src={member.avatar}
                           alt={`Retrato de ${member.name}`}
@@ -276,7 +286,7 @@ export function Nosotros() {
             ¿Quieres colaborar con Noisy Studios?
           </h2>
           <p className="text-gray-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-            Siempre estamos abiertos a colaborar con otros estudiantes apasionados por el desarrollo de videojuegos, arte 3D y sonido.
+            Siempre estamos abiertos a colaborar con otros estudiantes apasionados por el desarrollo de videojuegos, arte 3D y sonido[cite: 8].
           </p>
 
           <div className="pt-2">
